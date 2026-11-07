@@ -60,6 +60,7 @@ Thumbs.db
 data/raw/*
 !data/raw/.gitkeep
 !data/raw/README.md
+backend/data/raw/
 data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
