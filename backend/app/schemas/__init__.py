@@ -14,6 +14,31 @@ from app.schemas.village import (
     AcquiredLayerSummary,
     VillageAcquisitionResponse,
 )
+from app.schemas.preprocessing import (
+    GeometryValidationStatus,
+    FeatureGeometryAudit,
+    GeometryRepairReport,
+)
+from app.schemas.classification import (
+    PrimaryCategory,
+    StandardizedFeatureMetadata,
+    StandardizedFeature,
+    StandardizedFeatureCollection,
+    ClassificationRuleMatch,
+    ClassificationReport,
+)
+from app.schemas.spatial_validation import (
+    SpatialRelationStatus,
+    ClippingStatus,
+    BoundaryType,
+    BoundaryDefinition,
+    FeatureSpatialAudit,
+    SpatialValidationReport,
+)
+from app.schemas.reconciliation import (
+    VillageAnchorOrigin,
+    ReconciliationReport,
+)
 
 __all__ = [
     "HealthResponse",
@@ -27,4 +52,21 @@ __all__ = [
     "VillageAcquisitionRequest",
     "AcquiredLayerSummary",
     "VillageAcquisitionResponse",
+    "GeometryValidationStatus",
+    "FeatureGeometryAudit",
+    "GeometryRepairReport",
+    "PrimaryCategory",
+    "StandardizedFeatureMetadata",
+    "StandardizedFeature",
+    "StandardizedFeatureCollection",
+    "ClassificationRuleMatch",
+    "ClassificationReport",
+    "SpatialRelationStatus",
+    "ClippingStatus",
+    "BoundaryType",
+    "BoundaryDefinition",
+    "FeatureSpatialAudit",
+    "SpatialValidationReport",
+    "VillageAnchorOrigin",
+    "ReconciliationReport",
 ]
