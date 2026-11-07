@@ -93,6 +93,7 @@ class ProcessingPipelineReport(BaseModel):
     boundary_info: Optional[Dict[str, Any]] = None
     road_overlap_summary: Optional[Dict[str, Any]] = None
     layer_results: Dict[str, LayerProcessingResult] = Field(default_factory=dict)
+    canonical_final_files: Dict[str, str] = Field(default_factory=dict)
     global_warnings: List[str] = Field(default_factory=list)
     global_errors: List[str] = Field(default_factory=list)
 
@@ -243,6 +244,7 @@ class ProcessingPipeline:
         # ==========================================================
         boundary_info = None
         overlap_summary = None
+        derived_boundary_gdf: Optional[gpd.GeoDataFrame] = None
 
         if "spatial_validation" in self.config.enabled_operations and processed_final_gdfs:
             try:
@@ -287,6 +289,7 @@ class ProcessingPipeline:
                         [{"boundary_name": boundary_def.boundary_name, "is_verified": boundary_def.is_verified, "geometry": boundary_geom}],
                         crs=self.config.target_crs,
                     )
+                    derived_boundary_gdf = boundary_gdf
                     b_path = self.exporter.export_stage(
                         boundary_gdf, "validated", self.config.acquisition_id, f"{self.config.village_name.lower()}_boundary"
                     )
@@ -311,6 +314,7 @@ class ProcessingPipeline:
         # ==========================================================
         # STEP 3: FINAL GEOJSON EXPORT & REPRODUCIBILITY AUDIT
         # ==========================================================
+        canonical_final_files: Dict[str, str] = {}
         if "export_final" in self.config.enabled_operations:
             for layer_key, gdf in processed_final_gdfs.items():
                 try:
@@ -323,6 +327,29 @@ class ProcessingPipeline:
                     err_str = f"Failed final export for {layer_key}: {exc}"
                     logger.error(err_str)
                     global_errors.append(err_str)
+
+            # Export top-level canonical final layers (village_boundary, buildings, roads, water_bodies, land_parcels, community_assets)
+            try:
+                b_gdf = next((gdf for k, gdf in processed_final_gdfs.items() if "build" in k.lower()), None)
+                r_gdf = next((gdf for k, gdf in processed_final_gdfs.items() if "road" in k.lower()), None)
+                p_gdf = next((gdf for k, gdf in processed_final_gdfs.items() if "parcel" in k.lower()), None)
+                w_gdf = next((gdf for k, gdf in processed_final_gdfs.items() if "water" in k.lower()), None)
+                c_gdf = next((gdf for k, gdf in processed_final_gdfs.items() if "community" in k.lower()), None)
+
+                canonical_paths = self.exporter.export_canonical_final_layers(
+                    buildings_gdf=b_gdf,
+                    roads_gdf=r_gdf,
+                    land_parcels_gdf=p_gdf,
+                    village_boundary_gdf=derived_boundary_gdf,
+                    water_bodies_gdf=w_gdf,
+                    community_assets_gdf=c_gdf,
+                    crs=self.config.target_crs,
+                )
+                canonical_final_files = {k: str(v) for k, v in canonical_paths.items()}
+            except Exception as exc:
+                err_str = f"Failed canonical final layers export: {exc}"
+                logger.error(err_str)
+                global_errors.append(err_str)
 
         # Determine overall pipeline status
         success_count = sum(1 for r in layer_results.values() if r.status == "success")
@@ -356,6 +383,7 @@ class ProcessingPipeline:
             boundary_info=boundary_info,
             road_overlap_summary=overlap_summary,
             layer_results=layer_results,
+            canonical_final_files=canonical_final_files,
             global_warnings=global_warnings,
             global_errors=global_errors,
         )

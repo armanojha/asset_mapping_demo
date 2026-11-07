@@ -221,3 +221,26 @@ def test_pipeline_integration_real_gudwara_dataset():
         assert gdf.crs.to_string() == "EPSG:4326"
         assert "_vertical_tier" in gdf.columns
         assert "_plinth_elevation_m" in gdf.columns
+
+    # Verify canonical top-level files in data/processed/final/
+    canonical_files = [
+        "village_boundary.geojson",
+        "buildings.geojson",
+        "roads.geojson",
+        "water_bodies.geojson",
+        "land_parcels.geojson",
+        "community_assets.geojson",
+    ]
+    for c_file in canonical_files:
+        canonical_p = output_dir / "final" / c_file
+        assert canonical_p.exists(), f"Canonical file missing: {canonical_p}"
+        c_gdf = gpd.read_file(canonical_p)
+        assert c_gdf.crs.to_string() == "EPSG:4326"
+
+    # Specific count checks on canonical files
+    assert len(gpd.read_file(output_dir / "final" / "buildings.geojson")) == 424
+    assert len(gpd.read_file(output_dir / "final" / "roads.geojson")) == 106
+    assert len(gpd.read_file(output_dir / "final" / "land_parcels.geojson")) == 242
+    assert len(gpd.read_file(output_dir / "final" / "village_boundary.geojson")) == 1
+    assert len(gpd.read_file(output_dir / "final" / "water_bodies.geojson")) == 0
+    assert len(gpd.read_file(output_dir / "final" / "community_assets.geojson")) == 0

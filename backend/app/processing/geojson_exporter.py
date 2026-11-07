@@ -97,6 +97,65 @@ class GeoJSONExporter:
         out_path = target_dir / f"{layer_name}.{stage.lower()}.geojson"
         return self.export_and_verify(gdf, out_path)
 
+    def _create_empty_gdf(self, crs: str = "EPSG:4326") -> gpd.GeoDataFrame:
+        """Creates an empty GeoDataFrame with standard schema and CRS."""
+        return gpd.GeoDataFrame(
+            columns=[
+                "feature_id",
+                "source_id",
+                "source_name",
+                "source_layer",
+                "category",
+                "subcategory",
+                "geometry",
+            ],
+            geometry="geometry",
+            crs=crs,
+        )
+
+    def export_canonical_final_layers(
+        self,
+        buildings_gdf: Optional[gpd.GeoDataFrame] = None,
+        roads_gdf: Optional[gpd.GeoDataFrame] = None,
+        land_parcels_gdf: Optional[gpd.GeoDataFrame] = None,
+        village_boundary_gdf: Optional[gpd.GeoDataFrame] = None,
+        water_bodies_gdf: Optional[gpd.GeoDataFrame] = None,
+        community_assets_gdf: Optional[gpd.GeoDataFrame] = None,
+        crs: str = "EPSG:4326",
+    ) -> Dict[str, Path]:
+        """
+        Exports the canonical 6 final GeoJSON files directly into data/processed/final/:
+        - village_boundary.geojson
+        - buildings.geojson
+        - roads.geojson
+        - water_bodies.geojson
+        - land_parcels.geojson
+        - community_assets.geojson
+
+        All 6 files are verified for GeoPandas re-readability.
+        """
+        canonical_map = {
+            "village_boundary.geojson": village_boundary_gdf,
+            "buildings.geojson": buildings_gdf,
+            "roads.geojson": roads_gdf,
+            "water_bodies.geojson": water_bodies_gdf,
+            "land_parcels.geojson": land_parcels_gdf,
+            "community_assets.geojson": community_assets_gdf,
+        }
+
+        exported_paths = {}
+        for filename, gdf in canonical_map.items():
+            if gdf is None or len(gdf) == 0:
+                gdf_to_write = self._create_empty_gdf(crs=crs)
+            else:
+                gdf_to_write = gdf
+
+            out_path = self.final_dir / filename
+            exported_path = self.export_and_verify(gdf_to_write, out_path)
+            exported_paths[filename] = exported_path
+
+        return exported_paths
+
     def save_report(
         self,
         report_data: Dict[str, Any],

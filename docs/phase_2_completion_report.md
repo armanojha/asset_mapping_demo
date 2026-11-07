@@ -131,36 +131,53 @@ backend\venv\Scripts\pytest backend\tests -v
 
 ---
 
-## 5. Exported File Hierarchy
+## 5. Canonical Directory & File Hierarchy
 
-All output artifacts are structured as requested:
+All output artifacts and canonical final datasets are strictly structured as specified:
 
 ```
-data/processed/
-├── normalized/acq_1fa4312f8f87/
-│   ├── roads.normalized.geojson
-│   ├── buildings.normalized.geojson
-│   └── parcels.normalized.geojson
-├── cleaned/acq_1fa4312f8f87/
-│   ├── roads.cleaned.geojson
-│   ├── buildings.cleaned.geojson
-│   └── parcels.cleaned.geojson
-├── classified/acq_1fa4312f8f87/
-│   ├── roads.classified.geojson
-│   ├── buildings.classified.geojson
-│   └── parcels.classified.geojson
-├── validated/acq_1fa4312f8f87/
-│   ├── roads.validated.geojson
-│   ├── buildings.validated.geojson
-│   ├── parcels.validated.geojson
-│   └── gudwara_boundary.validated.geojson
-├── final/acq_1fa4312f8f87/
-│   ├── roads.final.geojson
-│   ├── buildings.final.geojson
-│   └── parcels.final.geojson
-└── reports/acq_1fa4312f8f87/
-    └── pipeline_run_20261107_104440.json
+data/
+│
+├── raw/
+│   ├── grammanchitra/
+│   │   └── acq_1fa4312f8f87/
+│   ├── svamitva/
+│   │   └── acq_1fa4312f8f87/
+│   └── osm/
+│
+└── processed/
+    ├── normalized/
+    │   └── acq_1fa4312f8f87/
+    ├── cleaned/
+    │   └── acq_1fa4312f8f87/
+    ├── classified/
+    │   └── acq_1fa4312f8f87/
+    ├── validated/
+    │   └── acq_1fa4312f8f87/
+    │
+    ├── final/
+    │   ├── village_boundary.geojson   (1 record, 4,102 bytes)
+    │   ├── buildings.geojson          (424 records, 908,022 bytes)
+    │   ├── roads.geojson              (106 records, 282,466 bytes)
+    │   ├── water_bodies.geojson       (0 records, 160 bytes - valid empty FeatureCollection)
+    │   ├── land_parcels.geojson       (242 records, 593,004 bytes)
+    │   └── community_assets.geojson   (0 records, 164 bytes - valid empty FeatureCollection)
+    │
+    └── reports/
+        └── acq_1fa4312f8f87/
+            └── pipeline_run_20261107_*.json
 ```
+
+### 5.1 Canonical Final Layer Specifications
+
+| Canonical File | Feature Count | Geometry Type | CRS | Staging / Threat Mitigation Applied |
+| :--- | :---: | :---: | :---: | :--- |
+| **`village_boundary.geojson`** | 1 | `Polygon` | `EPSG:4326` | Derived cadastral hull with 15m buffer; tagged `is_verified: False`. |
+| **`buildings.geojson`** | 424 | `Polygon` | `EPSG:4326` | Plinth elevation $+0.15\text{m}$, vertical tier 2, synthesized heights ($3.0\text{m}, 4.5\text{m}, 7.0\text{m}$), 175 road-overlap encroachment tags. |
+| **`roads.geojson`** | 106 | `Polygon` | `EPSG:4326` | Vertical tier 1, plinth offset $0.00\text{m}$, subcategorized into `village_road` and `paved_road`. |
+| **`water_bodies.geojson`** | 0 | `None` (Empty) | `EPSG:4326` | Valid GeoJSON `FeatureCollection` (`"features": []`). No water bodies present in source Abadi survey; preserved without synthetic hallucination. |
+| **`land_parcels.geojson`** | 242 | `Polygon` | `EPSG:4326` | Vertical tier 0, plinth offset $-0.01\text{m}$, property parcels with boundary alignment. |
+| **`community_assets.geojson`** | 0 | `None` (Empty) | `EPSG:4326` | Valid GeoJSON `FeatureCollection` (`"features": []`). No institutional assets explicitly flagged in source parcel schema. |
 
 ---
 
