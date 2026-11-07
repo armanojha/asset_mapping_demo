@@ -1,13 +1,15 @@
 /**
  * VillageScene: Core 3D Procedural Scene Orchestrator.
- * Combines all Phase 3 procedural geometry generators into a unified React Three Fiber scene graph.
+ * Combines all Phase 4 procedural geometry generators into a unified React Three Fiber scene graph.
  *
  * Vertical Layer Staging:
- * - Tier 0: Land Parcels (Y = -0.01m) & Cadastral Demarcation Lines (Y = -0.005m)
- * - Tier 0: Water Bodies Bed (Y = -0.35m) & Water Surface (Y = -0.05m)
- * - Tier 1: Road Networks Surface (Y = 0.00m)
- * - Tier 1: Vegetation Ground Coverage (Y = 0.02m) & Instanced Trees
- * - Tier 2: Building Plinths (Y = +0.15m), Extruded Walls, and Roofs
+ * - Tier -1: Sandstone Diorama Pedestal Base (Y = -6.00m to -0.05m)
+ * - Tier 0: Cadastral Ground Terrain (Y = -0.05m)
+ * - Tier 0: Land Parcel Slabs (Y = -0.01m) & Boundary Demarcation Strokes (Y = -0.005m)
+ * - Tier 0: Water Bodies Bed (Y = -0.35m) & Water Surface Plane (Y = -0.05m)
+ * - Tier 1: Road Networks Surface (Y = +0.03m with clean curbs)
+ * - Tier 1: Generalized Green Coverage (Y = +0.02m) & Instanced Surveyed Trees
+ * - Tier 2: Building Plinths (Y = +0.20m), Extruded Walls (1.2x scale), and Roofs
  */
 
 import React, { useEffect, useMemo } from 'react';
@@ -19,17 +21,10 @@ import { RoadGenerator } from '../generators/RoadGenerator';
 import { WaterGenerator } from '../generators/WaterGenerator';
 import { LandParcelGenerator } from '../generators/LandParcelGenerator';
 import { VegetationGenerator } from '../generators/VegetationGenerator';
+import { DemGridData, TerrainGenerator } from '../generators/TerrainGenerator';
 import { BuildingMaterialSystem } from '../materials/BuildingMaterials';
 import { LoadedGeospatialFeature } from '../types/geospatial';
-
-export interface LayerVisibilitySettings {
-  buildings: boolean;
-  roofs: boolean;
-  roads: boolean;
-  parcels: boolean;
-  water: boolean;
-  vegetation: boolean;
-}
+import { LayerManagerMap } from '../types/layers';
 
 export interface VillageSceneProps {
   buildingFeatures: LoadedGeospatialFeature[];
@@ -37,9 +32,12 @@ export interface VillageSceneProps {
   parcelFeatures: LoadedGeospatialFeature[];
   waterFeatures?: LoadedGeospatialFeature[];
   vegetationFeatures?: LoadedGeospatialFeature[];
+  boundaryFeature?: LoadedGeospatialFeature | null;
+  demData?: DemGridData | null;
   converter: CoordinateConverter;
   materialSystem: BuildingMaterialSystem;
-  visibility: LayerVisibilitySettings;
+  layers: LayerManagerMap;
+  highlightEncroachments?: boolean;
   selectedId: string | null;
   hoveredId: string | null;
   onHover: (id: string | null) => void;
@@ -54,6 +52,8 @@ interface BuildingItemProps {
   feature: LoadedGeospatialFeature;
   converter: CoordinateConverter;
   generator: BuildingGenerator;
+  materialSystem: BuildingMaterialSystem;
+  highlightEncroachments: boolean;
   isSelected: boolean;
   isHovered: boolean;
   onHover: (id: string | null) => void;
@@ -64,6 +64,8 @@ const BuildingItem: React.FC<BuildingItemProps> = ({
   feature,
   converter,
   generator,
+  materialSystem,
+  highlightEncroachments,
   isSelected,
   isHovered,
   onHover,
@@ -73,19 +75,21 @@ const BuildingItem: React.FC<BuildingItemProps> = ({
     return generator.generateBuilding(feature, converter);
   }, [feature, converter, generator]);
 
-  const materials = useMemo(() => BuildingMaterialSystem.getInstance(), []);
-
   useEffect(() => {
     if (buildingObject.wallMesh) {
       if (isSelected) {
-        buildingObject.wallMesh.material = materials.selectedWallMaterial;
+        buildingObject.wallMesh.material = materialSystem.selectedWallMaterial;
       } else if (isHovered) {
-        buildingObject.wallMesh.material = materials.hoveredWallMaterial;
+        buildingObject.wallMesh.material = materialSystem.hoveredWallMaterial;
       } else {
-        buildingObject.wallMesh.material = materials.defaultWallMaterial;
+        buildingObject.wallMesh.material = materialSystem.getWallMaterialForFeature(
+          feature.featureId,
+          feature.hasRoadOverlap,
+          highlightEncroachments
+        );
       }
     }
-  }, [isSelected, isHovered, buildingObject, materials]);
+  }, [isSelected, isHovered, highlightEncroachments, buildingObject, materialSystem, feature]);
 
   const handleClick = (e: ThreeEvent<MouseEvent>) => {
     e.stopPropagation();
@@ -165,9 +169,12 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
   parcelFeatures,
   waterFeatures = [],
   vegetationFeatures = [],
+  boundaryFeature = null,
+  demData = null,
   converter,
   materialSystem,
-  visibility,
+  layers,
+  highlightEncroachments = false,
   selectedId,
   hoveredId,
   onHover,
@@ -181,17 +188,24 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
   const buildingGenerator = useMemo(() => {
     return new BuildingGenerator(
       {
-        enableRoofs: visibility.roofs,
+        enableRoofs: layers.roofs.visible,
         enablePlinths: true,
         enableShadows: true,
+        verticalExaggeration: 1.2,
+        highlightEncroachments,
       },
       materialSystem,
       roofGenerator
     );
-  }, [visibility.roofs, materialSystem, roofGenerator]);
+  }, [layers.roofs.visible, highlightEncroachments, materialSystem, roofGenerator]);
 
   const roadGenerator = useMemo(() => {
-    return new RoadGenerator({}, materialSystem);
+    return new RoadGenerator(
+      {
+        verticalElevationMeters: 0.03, // Raised curb height above parcel plane
+      },
+      materialSystem
+    );
   }, [materialSystem]);
 
   const waterGenerator = useMemo(() => {
@@ -206,21 +220,40 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
     return new VegetationGenerator({}, materialSystem);
   }, [materialSystem]);
 
-  // 2. Batch Vegetation Layer (instanced trees and green areas)
+  const terrainGenerator = useMemo(() => {
+    return new TerrainGenerator(
+      {
+        verticalExaggeration: 1.2,
+        pedestalDepthMeters: 6.0,
+        surfaceElevationOffsetMeters: -0.05,
+      },
+      materialSystem
+    );
+  }, [materialSystem]);
+
+  // 2. Terrain & Diorama Pedestal Object
+  const terrainObject = useMemo(() => {
+    if (!boundaryFeature || !layers.terrain.visible) return null;
+    return terrainGenerator.generateTerrain(boundaryFeature, converter, demData);
+  }, [boundaryFeature, layers.terrain.visible, terrainGenerator, converter, demData]);
+
+  // 3. Batch Vegetation Layer (instanced trees and green areas)
   const vegetationLayerObject = useMemo(() => {
-    if (!visibility.vegetation || vegetationFeatures.length === 0) {
+    if (!layers.vegetation.visible || vegetationFeatures.length === 0) {
       return null;
     }
     return vegetationGenerator.generateVegetationLayer(vegetationFeatures, converter);
-  }, [visibility.vegetation, vegetationFeatures, vegetationGenerator, converter]);
+  }, [layers.vegetation.visible, vegetationFeatures, vegetationGenerator, converter]);
 
   return (
     <group name="VillageSceneRoot">
-      {/* Reference Spatial Grid Helper */}
-      <gridHelper args={[700, 70, '#334155', '#1e293b']} position={[0, -0.06, 0]} />
+      {/* TIER -1 & 0: Terrain Surface & Monolithic Sandstone Diorama Pedestal */}
+      {layers.terrain.visible && terrainObject && (
+        <primitive object={terrainObject.group} />
+      )}
 
       {/* TIER 0: Cadastral Land Parcels (Y = -0.01m) */}
-      {visibility.parcels && (
+      {layers.parcels.visible && (
         <group name="LandParcelsLayer">
           {parcelFeatures.map((feat) => (
             <ParcelItem
@@ -234,7 +267,7 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
       )}
 
       {/* TIER 0: Water Bodies (Bed Y = -0.35m, Surface Y = -0.05m) */}
-      {visibility.water && waterFeatures.length > 0 && (
+      {layers.water.visible && waterFeatures.length > 0 && (
         <group name="WaterBodiesLayer">
           {waterFeatures.map((feat) => (
             <WaterItem
@@ -247,8 +280,8 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
         </group>
       )}
 
-      {/* TIER 1: Road Networks (Y = 0.00m) */}
-      {visibility.roads && (
+      {/* TIER 1: Road Networks (Y = +0.03m with visible curbs) */}
+      {layers.roads.visible && (
         <group name="RoadsLayer">
           {roadFeatures.map((feat) => (
             <RoadItem
@@ -261,13 +294,13 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
         </group>
       )}
 
-      {/* TIER 1: Vegetation Layer (Y = 0.02m + Instanced Trees) */}
-      {visibility.vegetation && vegetationLayerObject && (
+      {/* TIER 1: Vegetation Layer (Y = +0.02m + Instanced Trees) */}
+      {layers.vegetation.visible && vegetationLayerObject && (
         <primitive object={vegetationLayerObject.group} />
       )}
 
-      {/* TIER 2: Buildings and Roofs (Plinth Y = +0.15m) */}
-      {visibility.buildings && (
+      {/* TIER 2: Buildings and Roofs (Plinth Y = +0.20m, 1.2x vertical scale) */}
+      {layers.buildings.visible && (
         <group name="BuildingsLayer">
           {buildingFeatures.map((feat) => (
             <BuildingItem
@@ -275,6 +308,8 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
               feature={feat}
               converter={converter}
               generator={buildingGenerator}
+              materialSystem={materialSystem}
+              highlightEncroachments={highlightEncroachments}
               isSelected={selectedId === feat.featureId}
               isHovered={hoveredId === feat.featureId}
               onHover={onHover}

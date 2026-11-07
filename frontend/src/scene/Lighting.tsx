@@ -1,7 +1,7 @@
 /**
- * Modular Lighting System for the Isometric Village Scene.
- * Provides balanced natural daylighting with soft directional shadows,
- * subtle sky/ground hemisphere bounce, and clear ambient fill illumination.
+ * Modular Volumetric Daylighting System for the Isometric Village Scene.
+ * Implements mid-morning solar angles (42° solar elevation, 135° azimuth),
+ * soft PCF directional shadows, and natural ambient skylight bounce.
  */
 
 import React from 'react';
@@ -18,21 +18,21 @@ export interface LightingProps {
 }
 
 export const Lighting: React.FC<LightingProps> = ({
-  ambientIntensity = 0.65,
-  sunPosition = [180, 280, 140],
-  sunIntensity = 1.35,
-  sunColor = '#fffdf5',
-  skyColor = '#bae6fd',
-  groundColor = '#334155',
-  hemisphereIntensity = 0.45,
+  ambientIntensity = 0.45,
+  sunPosition = [160, 210, 160], // 42° solar elevation, 135° azimuth (South-East light vector)
+  sunIntensity = 1.45,
+  sunColor = '#fff4e0',         // Warm natural sunlight
+  skyColor = '#cbe3f7',         // Cool azure skylight
+  groundColor = '#473b30',      // Warm earth bounce
+  hemisphereIntensity = 0.50,
   enableShadows = true,
 }) => {
   return (
     <>
-      {/* 1. Ambient Fill Light - prevents dark, unreadable shadows */}
+      {/* 1. Ambient Fill Light - balanced fill preventing pitch-black shadows */}
       <ambientLight intensity={ambientIntensity} color="#f8fafc" />
 
-      {/* 2. Directional Sunlight - key light creating crisp isometric depth */}
+      {/* 2. Key Directional Sunlight - casts 45° diagonal soft shadows through village alleys */}
       <directionalLight
         position={sunPosition}
         intensity={sunIntensity}
@@ -40,16 +40,17 @@ export const Lighting: React.FC<LightingProps> = ({
         castShadow={enableShadows}
         shadow-mapSize-width={2048}
         shadow-mapSize-height={2048}
-        shadow-camera-left={-300}
-        shadow-camera-right={300}
-        shadow-camera-top={300}
-        shadow-camera-bottom={-300}
-        shadow-camera-near={10}
-        shadow-camera-far={800}
-        shadow-bias={-0.0004}
+        shadow-camera-left={-280}
+        shadow-camera-right={280}
+        shadow-camera-top={280}
+        shadow-camera-bottom={-280}
+        shadow-camera-near={15}
+        shadow-camera-far={750}
+        shadow-bias={-0.00035}
+        shadow-normalBias={0.02} // Eliminates shadow acne on thin roof parapets
       />
 
-      {/* 3. Hemisphere Sky/Ground Light - natural outdoor environment bounce */}
+      {/* 3. Hemisphere Sky/Ground Light - outdoor atmospheric fill */}
       <hemisphereLight
         args={[skyColor, groundColor, hemisphereIntensity]}
       />

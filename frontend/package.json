@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "tsx tests/geospatial_engine.test.ts && tsx tests/building_and_roof_generator.test.ts && tsx tests/roads_water_parcels.test.ts && tsx tests/vegetation_generator.test.ts"
+    "test": "tsx tests/geospatial_engine.test.ts && tsx tests/building_and_roof_generator.test.ts && tsx tests/roads_water_parcels.test.ts && tsx tests/vegetation_generator.test.ts && tsx tests/terrain_generator.test.ts"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.6",

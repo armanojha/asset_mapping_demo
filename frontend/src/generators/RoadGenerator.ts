@@ -70,7 +70,7 @@ export class RoadGenerator {
       pavedRoadWidthMeters: options.pavedRoadWidthMeters ?? 6.0,
       villageRoadWidthMeters: options.villageRoadWidthMeters ?? 4.0,
       pathWidthMeters: options.pathWidthMeters ?? 2.5,
-      verticalElevationMeters: options.verticalElevationMeters ?? 0.0,
+      verticalElevationMeters: options.verticalElevationMeters ?? 0.03,
       maxMiterRatio: options.maxMiterRatio ?? 2.5,
       roundCaps: options.roundCaps ?? true,
     };

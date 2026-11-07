@@ -18,10 +18,12 @@ import {
 export interface BuildingGeneratorOptions {
   defaultStoreyHeightMeters?: number; // Default: 3.0m
   defaultBuildingHeightMeters?: number; // Default: 4.5m
-  defaultPlinthElevationMeters?: number; // Default: 0.15m
+  defaultPlinthElevationMeters?: number; // Default: 0.20m
+  verticalExaggeration?: number;      // Default: 1.2
   enableRoofs?: boolean;              // Default: true
   enablePlinths?: boolean;            // Default: true
   enableShadows?: boolean;            // Default: true
+  highlightEncroachments?: boolean;   // Default: false
 }
 
 export interface HeightEstimationResult {
@@ -84,10 +86,12 @@ export class BuildingGenerator {
     this.options = {
       defaultStoreyHeightMeters: options.defaultStoreyHeightMeters ?? 3.0,
       defaultBuildingHeightMeters: options.defaultBuildingHeightMeters ?? 4.5,
-      defaultPlinthElevationMeters: options.defaultPlinthElevationMeters ?? 0.15,
+      defaultPlinthElevationMeters: options.defaultPlinthElevationMeters ?? 0.20,
+      verticalExaggeration: options.verticalExaggeration ?? 1.2,
       enableRoofs: options.enableRoofs ?? true,
       enablePlinths: options.enablePlinths ?? true,
       enableShadows: options.enableShadows ?? true,
+      highlightEncroachments: options.highlightEncroachments ?? false,
     };
     this.materialSystem = materialSystem || BuildingMaterialSystem.getInstance();
     this.roofGenerator = roofGenerator || new RoofGenerator({}, this.materialSystem);
@@ -164,9 +168,10 @@ export class BuildingGenerator {
         plinthMeshes.push(plinthMesh);
       }
 
-      // 2. Extruded Building Walls Geometry
+      // 2. Extruded Building Walls Geometry with Controlled Vertical Exaggeration
+      const visualWallHeight = heightResult.heightMeters * this.options.verticalExaggeration;
       const wallGeom = new THREE.ExtrudeGeometry(shape, {
-        depth: heightResult.heightMeters,
+        depth: visualWallHeight,
         bevelEnabled: false,
       });
       // Rotate so extrusion is along +Y (Up) and footprint sits on XZ
@@ -174,7 +179,13 @@ export class BuildingGenerator {
       wallGeom.translate(0, plinthElevation, 0);
       wallGeom.computeVertexNormals();
 
-      const wallMesh = new THREE.Mesh(wallGeom, this.materialSystem.defaultWallMaterial);
+      const wallMaterial = this.materialSystem.getWallMaterialForFeature(
+        feature.featureId,
+        feature.hasRoadOverlap,
+        this.options.highlightEncroachments
+      );
+
+      const wallMesh = new THREE.Mesh(wallGeom, wallMaterial);
       wallMesh.name = `Walls_${feature.featureId}_part${partIdx}`;
       if (this.options.enableShadows) {
         wallMesh.castShadow = true;
@@ -183,9 +194,9 @@ export class BuildingGenerator {
       buildingGroup.add(wallMesh);
       wallMeshes.push(wallMesh);
 
-      // 3. Roof Generation
+      // 3. Roof Generation atop wallTopY
       if (this.options.enableRoofs) {
-        const wallTopY = plinthElevation + heightResult.heightMeters;
+        const wallTopY = plinthElevation + visualWallHeight;
         const roofResult = this.roofGenerator.generateRoof(
           shape,
           exteriorPoints2D,
