@@ -14,13 +14,22 @@ export interface MaterialPaletteConfig {
   roofFlatColor?: string;
   roofGableColor?: string;
   roofHipColor?: string;
+  asphaltRoadColor?: string;
+  earthenRoadColor?: string;
+  waterColor?: string;
+  parcelColor?: string;
+  parcelBorderColor?: string;
+  foliageColor?: string;
+  treeTrunkColor?: string;
+  vegetationAreaColor?: string;
+  vegetationBorderColor?: string;
   wireframe?: boolean;
 }
 
 export class BuildingMaterialSystem {
   private static instance: BuildingMaterialSystem | null = null;
 
-  // Reusable Material Singletons
+  // Reusable Material Singletons - Buildings
   public readonly defaultWallMaterial: THREE.MeshStandardMaterial;
   public readonly selectedWallMaterial: THREE.MeshStandardMaterial;
   public readonly hoveredWallMaterial: THREE.MeshStandardMaterial;
@@ -30,6 +39,25 @@ export class BuildingMaterialSystem {
   public readonly flatRoofMaterial: THREE.MeshStandardMaterial;
   public readonly gableRoofMaterial: THREE.MeshStandardMaterial;
   public readonly hipRoofMaterial: THREE.MeshStandardMaterial;
+
+  // Road Materials
+  public readonly asphaltRoadMaterial: THREE.MeshStandardMaterial;
+  public readonly earthenRoadMaterial: THREE.MeshStandardMaterial;
+
+  // Water Materials
+  public readonly waterSurfaceMaterial: THREE.MeshStandardMaterial;
+  public readonly waterBedMaterial: THREE.MeshStandardMaterial;
+
+  // Land Parcel Materials
+  public readonly parcelMaterial: THREE.MeshStandardMaterial;
+  public readonly parcelBorderMaterial: THREE.LineBasicMaterial;
+  public readonly villageBoundaryLineMaterial: THREE.LineBasicMaterial;
+
+  // Vegetation Materials
+  public readonly foliageTreeMaterial: THREE.MeshStandardMaterial;
+  public readonly treeTrunkMaterial: THREE.MeshStandardMaterial;
+  public readonly vegetationAreaMaterial: THREE.MeshStandardMaterial;
+  public readonly vegetationBorderMaterial: THREE.LineBasicMaterial;
 
   // Edge / Border Material
   public readonly edgeLineMaterial: THREE.LineBasicMaterial;
@@ -42,6 +70,15 @@ export class BuildingMaterialSystem {
     const roofFlat = config.roofFlatColor || '#94a3b8';        // Concrete terrace slab
     const roofGable = config.roofGableColor || '#c2410c';      // Terracotta clay tile (kavelu)
     const roofHip = config.roofHipColor || '#b45309';          // Earthen clay tile
+    const asphaltCol = config.asphaltRoadColor || '#334155';   // Dark paved asphalt
+    const earthenCol = config.earthenRoadColor || '#8c7355';   // Earthen village pathway
+    const waterCol = config.waterColor || '#0284c7';           // Deep reflective pond water
+    const parcelCol = config.parcelColor || '#e2e8f0';         // Subtle parcel ground tone
+    const parcelBorderCol = config.parcelBorderColor || '#64748b'; // Cadastral stroke border
+    const foliageCol = config.foliageColor || '#2e7d32';       // Natural foliage green
+    const trunkCol = config.treeTrunkColor || '#5d4037';       // Tree bark brown
+    const vegAreaCol = config.vegetationAreaColor || '#4ade80'; // Meadow/scrub vegetation area
+    const vegBorderCol = config.vegetationBorderColor || '#15803d'; // Green vegetation boundary outline
     const wireframe = Boolean(config.wireframe);
 
     this.defaultWallMaterial = new THREE.MeshStandardMaterial({
@@ -103,6 +140,88 @@ export class BuildingMaterialSystem {
       side: THREE.DoubleSide,
     });
 
+    // Roads
+    this.asphaltRoadMaterial = new THREE.MeshStandardMaterial({
+      color: asphaltCol,
+      roughness: 0.85,
+      metalness: 0.05,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.earthenRoadMaterial = new THREE.MeshStandardMaterial({
+      color: earthenCol,
+      roughness: 0.95,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    // Water
+    this.waterSurfaceMaterial = new THREE.MeshStandardMaterial({
+      color: waterCol,
+      roughness: 0.15,
+      metalness: 0.1,
+      transparent: true,
+      opacity: 0.85,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.waterBedMaterial = new THREE.MeshStandardMaterial({
+      color: '#0f172a',
+      roughness: 0.95,
+      metalness: 0.05,
+      wireframe,
+    });
+
+    // Land Parcels
+    this.parcelMaterial = new THREE.MeshStandardMaterial({
+      color: parcelCol,
+      roughness: 0.9,
+      metalness: 0.05,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.parcelBorderMaterial = new THREE.LineBasicMaterial({
+      color: parcelBorderCol,
+      linewidth: 1.5,
+    });
+
+    this.villageBoundaryLineMaterial = new THREE.LineBasicMaterial({
+      color: '#ef4444',
+      linewidth: 2,
+    });
+
+    // Vegetation
+    this.foliageTreeMaterial = new THREE.MeshStandardMaterial({
+      color: foliageCol,
+      roughness: 0.75,
+      metalness: 0.05,
+      wireframe,
+    });
+
+    this.treeTrunkMaterial = new THREE.MeshStandardMaterial({
+      color: trunkCol,
+      roughness: 0.9,
+      metalness: 0.05,
+      wireframe,
+    });
+
+    this.vegetationAreaMaterial = new THREE.MeshStandardMaterial({
+      color: vegAreaCol,
+      roughness: 0.85,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.vegetationBorderMaterial = new THREE.LineBasicMaterial({
+      color: vegBorderCol,
+      linewidth: 1.5,
+    });
+
     this.edgeLineMaterial = new THREE.LineBasicMaterial({
       color: '#334155',
       linewidth: 1,
@@ -139,6 +258,13 @@ export class BuildingMaterialSystem {
     this.flatRoofMaterial.dispose();
     this.gableRoofMaterial.dispose();
     this.hipRoofMaterial.dispose();
+    this.asphaltRoadMaterial.dispose();
+    this.earthenRoadMaterial.dispose();
+    this.waterSurfaceMaterial.dispose();
+    this.waterBedMaterial.dispose();
+    this.parcelMaterial.dispose();
+    this.parcelBorderMaterial.dispose();
+    this.villageBoundaryLineMaterial.dispose();
     this.edgeLineMaterial.dispose();
     BuildingMaterialSystem.instance = null;
   }

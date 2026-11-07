@@ -178,6 +178,13 @@ export class CoordinateConverter {
   }
 
   /**
+   * Alias for geoToThree to obtain local Three.js Vector3 coordinates from (lon, lat).
+   */
+  public toLocal(lon: number, lat: number, elevation: number = 0): Vector3 {
+    return this.geoToThree(lon, lat, elevation);
+  }
+
+  /**
    * Converts a Projected Metric UTM (Easting, Northing, Elevation) point to Three.js Vector3.
    */
   public projectedToThree(utmX: number, utmY: number, elevation: number = 0): Vector3 {

@@ -1,7 +1,7 @@
 /**
  * Interactive 3D Viewport for the Village Asset Mapping System.
- * Renders real village buildings from Phase 2 GeoJSON datasets using React Three Fiber.
- * Supports interactive raycasting, building selection, hover highlights, and roof toggling.
+ * Renders real village buildings, road networks, and cadastral land parcels from Phase 2 GeoJSON.
+ * Supports layer visibility toggles, interactive raycasting, and cadastral inspection.
  */
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -11,6 +11,8 @@ import { GeoJSONLoader } from '../loaders/GeoJSONLoader';
 import { CoordinateConverter } from '../generators/CoordinateConverter';
 import { BuildingGenerator, Building3DMetadata } from '../generators/BuildingGenerator';
 import { RoofGenerator } from '../generators/RoofGenerator';
+import { RoadGenerator } from '../generators/RoadGenerator';
+import { LandParcelGenerator } from '../generators/LandParcelGenerator';
 import { BuildingMaterialSystem } from '../materials/BuildingMaterials';
 import { LoadedGeospatialFeature } from '../types/geospatial';
 import { BuildingInspector } from '../components/BuildingInspector';
@@ -40,7 +42,6 @@ const BuildingMeshItem: React.FC<BuildingMeshItemProps> = ({
 
   const materials = useMemo(() => BuildingMaterialSystem.getInstance(), []);
 
-  // Update wall material based on interaction state
   useEffect(() => {
     if (buildingObject.wallMesh) {
       if (isSelected) {
@@ -79,14 +80,49 @@ const BuildingMeshItem: React.FC<BuildingMeshItemProps> = ({
   );
 };
 
+interface RoadMeshItemProps {
+  feature: LoadedGeospatialFeature;
+  converter: CoordinateConverter;
+  generator: RoadGenerator;
+}
+
+const RoadMeshItem: React.FC<RoadMeshItemProps> = ({ feature, converter, generator }) => {
+  const roadObject = useMemo(() => {
+    return generator.generateRoad(feature, converter);
+  }, [feature, converter, generator]);
+
+  return <primitive object={roadObject.mesh} />;
+};
+
+interface ParcelMeshItemProps {
+  feature: LoadedGeospatialFeature;
+  converter: CoordinateConverter;
+  generator: LandParcelGenerator;
+}
+
+const ParcelMeshItem: React.FC<ParcelMeshItemProps> = ({ feature, converter, generator }) => {
+  const parcelObject = useMemo(() => {
+    return generator.generateParcel(feature, converter);
+  }, [feature, converter, generator]);
+
+  return <primitive object={parcelObject.group} />;
+};
+
 export const VillageViewport: React.FC = () => {
-  const [features, setFeatures] = useState<LoadedGeospatialFeature[]>([]);
+  const [buildingFeatures, setBuildingFeatures] = useState<LoadedGeospatialFeature[]>([]);
+  const [roadFeatures, setRoadFeatures] = useState<LoadedGeospatialFeature[]>([]);
+  const [parcelFeatures, setParcelFeatures] = useState<LoadedGeospatialFeature[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [selectedMetadata, setSelectedMetadata] = useState<Building3DMetadata | null>(null);
-  const [enableRoofs, setEnableRoofs] = useState<boolean>(true);
+
+  // Layer Visibility Controls
+  const [showBuildings, setShowBuildings] = useState<boolean>(true);
+  const [showRoofs, setShowRoofs] = useState<boolean>(true);
+  const [showRoads, setShowRoads] = useState<boolean>(true);
+  const [showParcels, setShowParcels] = useState<boolean>(true);
   const [wireframe, setWireframe] = useState<boolean>(false);
 
   const controlsRef = useRef<any>(null);
@@ -102,42 +138,57 @@ export const VillageViewport: React.FC = () => {
   const buildingGenerator = useMemo(() => {
     return new BuildingGenerator(
       {
-        enableRoofs,
+        enableRoofs: showRoofs,
         enablePlinths: true,
         enableShadows: true,
       },
       materialSystem,
       roofGenerator
     );
-  }, [enableRoofs, materialSystem, roofGenerator]);
+  }, [showRoofs, materialSystem, roofGenerator]);
+
+  const roadGenerator = useMemo(() => {
+    return new RoadGenerator({}, materialSystem);
+  }, [materialSystem]);
+
+  const parcelGenerator = useMemo(() => {
+    return new LandParcelGenerator({}, materialSystem);
+  }, [materialSystem]);
 
   const converter = useMemo(() => {
     return new CoordinateConverter();
   }, []);
 
-  // Load actual village buildings from static GeoJSON
+  // Load actual village datasets from static GeoJSON files
   useEffect(() => {
     let isMounted = true;
     const loader = new GeoJSONLoader();
 
-    async function loadVillageBuildings() {
+    async function loadAllVillageLayers() {
       setLoading(true);
       setError(null);
       try {
-        const result = await loader.loadFromUrl('/data/buildings.geojson', 'Gudwara_Buildings');
+        const [bldgRes, roadRes, parcelRes] = await Promise.all([
+          loader.loadFromUrl('/data/buildings.geojson', 'Gudwara_Buildings'),
+          loader.loadFromUrl('/data/roads.geojson', 'Gudwara_Roads'),
+          loader.loadFromUrl('/data/land_parcels.geojson', 'Gudwara_Parcels'),
+        ]);
+
         if (isMounted) {
-          setFeatures(result.features);
+          setBuildingFeatures(bldgRes.features);
+          setRoadFeatures(roadRes.features);
+          setParcelFeatures(parcelRes.features);
           setLoading(false);
         }
       } catch (err: any) {
         if (isMounted) {
-          setError(err?.message || 'Failed to load village buildings GeoJSON');
+          setError(err?.message || 'Failed to load village GeoJSON layers');
           setLoading(false);
         }
       }
     }
 
-    loadVillageBuildings();
+    loadAllVillageLayers();
     return () => {
       isMounted = false;
     };
@@ -154,7 +205,7 @@ export const VillageViewport: React.FC = () => {
       style={{
         position: 'relative',
         width: '100%',
-        height: '620px',
+        height: '640px',
         backgroundColor: '#0f172a',
         borderRadius: '16px',
         overflow: 'hidden',
@@ -164,69 +215,86 @@ export const VillageViewport: React.FC = () => {
     >
       {/* 3D Canvas */}
       <Canvas shadows>
-        {/* Isometric Angle Camera */}
-        <PerspectiveCamera makeDefault position={[120, 160, 180]} fov={40} near={0.5} far={2000} />
+        <PerspectiveCamera makeDefault position={[120, 160, 180]} fov={40} near={0.5} far={2500} />
         <OrbitControls
           ref={controlsRef}
           enableDamping
           dampingFactor={0.05}
-          maxPolarAngle={Math.PI / 2.1} // Prevent going below ground
+          maxPolarAngle={Math.PI / 2.05} // Prevent camera going below terrain
           minDistance={10}
-          maxDistance={800}
+          maxDistance={900}
         />
 
-        {/* Ambient & Sun Lighting */}
+        {/* Lighting */}
         <ambientLight intensity={0.65} color="#f8fafc" />
         <directionalLight
-          position={[150, 250, 100]}
-          intensity={1.3}
+          position={[160, 260, 120]}
+          intensity={1.35}
           castShadow
           shadow-mapSize-width={2048}
           shadow-mapSize-height={2048}
-          shadow-camera-left={-250}
-          shadow-camera-right={250}
-          shadow-camera-top={250}
-          shadow-camera-bottom={-250}
+          shadow-camera-left={-260}
+          shadow-camera-right={260}
+          shadow-camera-top={260}
+          shadow-camera-bottom={-260}
           shadow-camera-near={10}
-          shadow-camera-far={600}
+          shadow-camera-far={700}
           shadow-bias={-0.0005}
         />
-        <hemisphereLight args={['#bae6fd', '#334155', 0.4]} />
+        <hemisphereLight args={['#bae6fd', '#334155', 0.45]} />
 
-        {/* Ground Reference Grid */}
-        <gridHelper args={[600, 60, '#334155', '#1e293b']} position={[0, -0.05, 0]} />
+        {/* Reference Grid */}
+        <gridHelper args={[650, 65, '#334155', '#1e293b']} position={[0, -0.06, 0]} />
 
-        {/* Ground Plane */}
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.06, 0]} receiveShadow>
-          <planeGeometry args={[1000, 1000]} />
-          <meshStandardMaterial color="#1e293b" roughness={0.9} metalness={0.1} />
-        </mesh>
+        {/* 1. Cadastral Land Parcels Layer (Tier 0: Y = -0.01m) */}
+        {showParcels &&
+          parcelFeatures.map((feat) => (
+            <ParcelMeshItem
+              key={feat.featureId}
+              feature={feat}
+              converter={converter}
+              generator={parcelGenerator}
+            />
+          ))}
 
-        {/* Render Generated Real Village Buildings */}
-        {features.map((feat) => (
-          <BuildingMeshItem
-            key={feat.featureId}
-            feature={feat}
-            converter={converter}
-            generator={buildingGenerator}
-            isSelected={selectedMetadata?.featureId === feat.featureId}
-            isHovered={hoveredId === feat.featureId}
-            onHover={setHoveredId}
-            onSelect={setSelectedMetadata}
-          />
-        ))}
+        {/* 2. Road Network Surface Layer (Tier 1: Y = 0.00m) */}
+        {showRoads &&
+          roadFeatures.map((feat) => (
+            <RoadMeshItem
+              key={feat.featureId}
+              feature={feat}
+              converter={converter}
+              generator={roadGenerator}
+            />
+          ))}
+
+        {/* 3. Building Footprints & Roofs Layer (Tier 2: Plinth Y = +0.15m) */}
+        {showBuildings &&
+          buildingFeatures.map((feat) => (
+            <BuildingMeshItem
+              key={feat.featureId}
+              feature={feat}
+              converter={converter}
+              generator={buildingGenerator}
+              isSelected={selectedMetadata?.featureId === feat.featureId}
+              isHovered={hoveredId === feat.featureId}
+              onHover={setHoveredId}
+              onSelect={setSelectedMetadata}
+            />
+          ))}
       </Canvas>
 
-      {/* Top Floating Control Bar */}
+      {/* Floating Layer Toolbar */}
       <div
         style={{
           position: 'absolute',
           top: '1rem',
           left: '1rem',
           display: 'flex',
-          gap: '0.5rem',
+          flexWrap: 'wrap',
+          gap: '0.4rem',
           alignItems: 'center',
-          backgroundColor: 'rgba(15, 23, 42, 0.85)',
+          backgroundColor: 'rgba(15, 23, 42, 0.88)',
           backdropFilter: 'blur(8px)',
           padding: '0.5rem 0.85rem',
           borderRadius: '10px',
@@ -237,35 +305,71 @@ export const VillageViewport: React.FC = () => {
         }}
       >
         <span style={{ fontWeight: 600, color: '#38bdf8' }}>
-          Living Digital Village: Gudwara, MP
+          Gudwara Digital Village (2.5D)
         </span>
         <span style={{ color: '#64748b' }}>|</span>
-        <span
-          style={{
-            backgroundColor: '#0369a1',
-            color: '#f0f9ff',
-            padding: '2px 8px',
-            borderRadius: '999px',
-            fontWeight: 600,
-          }}
-        >
-          {loading ? 'Loading...' : `${features.length} 3D Buildings`}
-        </span>
 
+        {/* Layer Visibility Toggles */}
         <button
-          onClick={() => setEnableRoofs(!enableRoofs)}
+          onClick={() => setShowBuildings(!showBuildings)}
           style={{
-            background: enableRoofs ? '#0284c7' : '#334155',
+            background: showBuildings ? '#0284c7' : '#334155',
             color: '#ffffff',
             border: 'none',
             borderRadius: '6px',
-            padding: '4px 8px',
+            padding: '3px 8px',
             fontSize: '0.75rem',
             cursor: 'pointer',
-            marginLeft: '0.25rem',
           }}
         >
-          Roofs: {enableRoofs ? 'ON' : 'OFF'}
+          Buildings ({buildingFeatures.length}): {showBuildings ? 'ON' : 'OFF'}
+        </button>
+
+        <button
+          onClick={() => setShowRoofs(!showRoofs)}
+          disabled={!showBuildings}
+          style={{
+            background: showRoofs && showBuildings ? '#0284c7' : '#334155',
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '6px',
+            padding: '3px 8px',
+            fontSize: '0.75rem',
+            cursor: showBuildings ? 'pointer' : 'not-allowed',
+            opacity: showBuildings ? 1 : 0.5,
+          }}
+        >
+          Roofs: {showRoofs ? 'ON' : 'OFF'}
+        </button>
+
+        <button
+          onClick={() => setShowRoads(!showRoads)}
+          style={{
+            background: showRoads ? '#0284c7' : '#334155',
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '6px',
+            padding: '3px 8px',
+            fontSize: '0.75rem',
+            cursor: 'pointer',
+          }}
+        >
+          Roads ({roadFeatures.length}): {showRoads ? 'ON' : 'OFF'}
+        </button>
+
+        <button
+          onClick={() => setShowParcels(!showParcels)}
+          style={{
+            background: showParcels ? '#0284c7' : '#334155',
+            color: '#ffffff',
+            border: 'none',
+            borderRadius: '6px',
+            padding: '3px 8px',
+            fontSize: '0.75rem',
+            cursor: 'pointer',
+          }}
+        >
+          Parcels ({parcelFeatures.length}): {showParcels ? 'ON' : 'OFF'}
         </button>
 
         <button
@@ -275,12 +379,12 @@ export const VillageViewport: React.FC = () => {
             color: wireframe ? '#000000' : '#ffffff',
             border: 'none',
             borderRadius: '6px',
-            padding: '4px 8px',
+            padding: '3px 8px',
             fontSize: '0.75rem',
             cursor: 'pointer',
           }}
         >
-          Wireframe: {wireframe ? 'ON' : 'OFF'}
+          Wireframe
         </button>
 
         <button
@@ -290,7 +394,7 @@ export const VillageViewport: React.FC = () => {
             color: '#ffffff',
             border: 'none',
             borderRadius: '6px',
-            padding: '4px 8px',
+            padding: '3px 8px',
             fontSize: '0.75rem',
             cursor: 'pointer',
           }}
@@ -309,16 +413,17 @@ export const VillageViewport: React.FC = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            backgroundColor: 'rgba(15, 23, 42, 0.7)',
+            backgroundColor: 'rgba(15, 23, 42, 0.75)',
             color: '#f8fafc',
             gap: '0.75rem',
+            zIndex: 30,
           }}
         >
-          <div style={{ fontSize: '1.1rem', fontWeight: 600 }}>
-            Extruding Real Village Footprints (Three.js)...
+          <div style={{ fontSize: '1.15rem', fontWeight: 600 }}>
+            Triangulating 3D Village Features (Three.js)...
           </div>
           <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-            Converting SVAMITVA cadastral coordinates & synthesizing roof typologies
+            Extruding 424 buildings, 106 road corridors, and 242 cadastral parcel slabs
           </div>
         </div>
       )}
@@ -335,9 +440,10 @@ export const VillageViewport: React.FC = () => {
             padding: '0.75rem 1rem',
             borderRadius: '8px',
             fontSize: '0.85rem',
+            zIndex: 45,
           }}
         >
-          Error loading building footprints: {error}
+          Error loading village layers: {error}
         </div>
       )}
 
