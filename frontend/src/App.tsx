@@ -54,7 +54,7 @@ const App: React.FC = () => {
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
       }}
     >
-      <Header title="Village Asset Mapping System - 2.5D Isometric World" version="0.3.0" />
+      <Header title="Village Asset Mapping System - 2.5D Isometric World" version="0.4.0" />
 
       <main style={{ padding: '1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
         {/* Interactive 3D Real Village Viewport */}
@@ -62,10 +62,10 @@ const App: React.FC = () => {
           <div style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
               <h2 style={{ fontSize: '1.25rem', margin: 0, fontWeight: 700, color: '#f8fafc' }}>
-                Procedural 3D Village Viewport (Phase 3)
+                Living Digital Village — 2.5D Isometric Diorama (Phase 4)
               </h2>
               <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.85rem', color: '#94a3b8' }}>
-                Rendering actual cadastral building footprints from SVAMITVA / Gram Manchitra surveys in Three.js. Click any building to inspect its cadastral metadata.
+                Rendering actual cadastral building footprints from SVAMITVA &amp; Gram Manchitra surveys in a handcrafted Central Indian diorama. Click any building to inspect its cadastral metadata.
               </p>
             </div>
           </div>
@@ -87,14 +87,14 @@ const App: React.FC = () => {
             }}
           >
             <h3 style={{ fontSize: '1rem', margin: '0 0 0.5rem 0', color: '#f8fafc', fontWeight: 600 }}>
-              Phase 3 Procedural Engine Status
+              Phase 4 Living Diorama &amp; Spatial Analytics Status
             </h3>
             <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#94a3b8', fontSize: '0.825rem', lineHeight: '1.6' }}>
-              <li><strong style={{ color: '#38bdf8' }}>Footprint Extrusion</strong>: 424 real building polygons from Gudwara, MP loaded & extruded.</li>
-              <li><strong style={{ color: '#38bdf8' }}>Courtyard Preservation</strong>: Interior holes cleanly excised via Earcut triangulation.</li>
-              <li><strong style={{ color: '#38bdf8' }}>Height Estimation</strong>: Priority logic (explicit measured &gt; storey multiplication &gt; area heuristic).</li>
-              <li><strong style={{ color: '#38bdf8' }}>Roof Typologies</strong>: Flat terrace, gabled tile, and hipped roofs with irregular fallbacks.</li>
-              <li><strong style={{ color: '#38bdf8' }}>Raycast Inspector</strong>: Instant click-to-inspect cadastral identity and spatial bounds.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Diorama Pedestal</strong>: Monolithic sandstone base extruded -6.0m from official village boundary.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Central Indian Palette</strong>: Chuna lime-wash, warm straw, earthen plaster, and terracotta tiles.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Volumetric Scale</strong>: 1.2x vertical exaggeration for human-scale isometric readability.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Mid-Morning Sun</strong>: 42° solar elevation casting soft 45° diagonal shadows through village alleyways.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Encroachment Audit</strong>: 175 houses intersecting road corridors with one-click audit highlight.</li>
             </ul>
           </div>
         </div>
