@@ -1,4 +1,5 @@
-# Common frontend TypeScript interfaces and types
+export * from './health';
+
 export interface BaseAssetMetadata {
   id: string;
   name: string;
