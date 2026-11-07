@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { BackendStatus } from './components/BackendStatus';
+import { VillageViewport } from './scene/VillageViewport';
 import { checkBackendHealth } from './services/api';
 import { HealthCheckState } from './types';
 
@@ -47,36 +48,55 @@ const App: React.FC = () => {
     <div
       style={{
         minHeight: '100vh',
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#0f172a',
+        color: '#f8fafc',
         fontFamily:
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
       }}
     >
-      <Header title="Village Asset Mapping System" version="0.1.0" />
+      <Header title="Village Asset Mapping System - 2.5D Isometric World" version="0.3.0" />
 
-      <main style={{ padding: '2rem 1rem' }}>
-        <BackendStatus healthState={healthState} onRefresh={fetchHealth} />
+      <main style={{ padding: '1.5rem', maxWidth: '1440px', margin: '0 auto' }}>
+        {/* Interactive 3D Real Village Viewport */}
+        <section style={{ marginBottom: '1.5rem' }}>
+          <div style={{ marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div>
+              <h2 style={{ fontSize: '1.25rem', margin: 0, fontWeight: 700, color: '#f8fafc' }}>
+                Procedural 3D Village Viewport (Phase 3)
+              </h2>
+              <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.85rem', color: '#94a3b8' }}>
+                Rendering actual cadastral building footprints from SVAMITVA / Gram Manchitra surveys in Three.js. Click any building to inspect its cadastral metadata.
+              </p>
+            </div>
+          </div>
 
-        <div
-          style={{
-            maxWidth: '600px',
-            margin: '1.5rem auto',
-            padding: '1.25rem',
-            backgroundColor: '#ffffff',
-            borderRadius: '12px',
-            border: '1px solid #e2e8f0',
-            textAlign: 'left',
-          }}
-        >
-          <h2 style={{ fontSize: '1.1rem', margin: '0 0 0.5rem 0', color: '#1e293b' }}>
-            System Architecture Readiness
-          </h2>
-          <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#64748b', fontSize: '0.875rem', lineHeight: '1.6' }}>
-            <li>Procedural 2.5D isometric world pipeline ready for initialization.</li>
-            <li>Three.js, React Three Fiber & Drei libraries installed for 3D viewports.</li>
-            <li>Modular frontend architecture (`scene`, `generators`, `loaders`, `services`).</li>
-            <li>FastAPI backend ready with CORS and standardized schemas.</li>
-          </ul>
+          <VillageViewport />
+        </section>
+
+        {/* Backend Status & System Telemetry */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: '1.25rem' }}>
+          <BackendStatus healthState={healthState} onRefresh={fetchHealth} />
+
+          <div
+            style={{
+              padding: '1.25rem',
+              backgroundColor: '#1e293b',
+              borderRadius: '12px',
+              border: '1px solid #334155',
+              textAlign: 'left',
+            }}
+          >
+            <h3 style={{ fontSize: '1rem', margin: '0 0 0.5rem 0', color: '#f8fafc', fontWeight: 600 }}>
+              Phase 3 Procedural Engine Status
+            </h3>
+            <ul style={{ margin: 0, paddingLeft: '1.25rem', color: '#94a3b8', fontSize: '0.825rem', lineHeight: '1.6' }}>
+              <li><strong style={{ color: '#38bdf8' }}>Footprint Extrusion</strong>: 424 real building polygons from Gudwara, MP loaded & extruded.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Courtyard Preservation</strong>: Interior holes cleanly excised via Earcut triangulation.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Height Estimation</strong>: Priority logic (explicit measured &gt; storey multiplication &gt; area heuristic).</li>
+              <li><strong style={{ color: '#38bdf8' }}>Roof Typologies</strong>: Flat terrace, gabled tile, and hipped roofs with irregular fallbacks.</li>
+              <li><strong style={{ color: '#38bdf8' }}>Raycast Inspector</strong>: Instant click-to-inspect cadastral identity and spatial bounds.</li>
+            </ul>
+          </div>
         </div>
       </main>
     </div>
