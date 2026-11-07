@@ -523,15 +523,15 @@ class FeatureClassifier:
 
         crs_str = str(gdf.crs) if gdf.crs is not None else self.default_crs
 
-        # Resolve ID column
+        # Resolve ID values cleanly
         if id_column and id_column in gdf.columns:
-            id_series = gdf[id_column]
+            id_values = list(gdf[id_column])
         elif "objectid" in gdf.columns:
-            id_series = gdf["objectid"]
+            id_values = list(gdf["objectid"])
         elif "osm_id" in gdf.columns:
-            id_series = gdf["osm_id"]
+            id_values = list(gdf["osm_id"])
         else:
-            id_series = gdf.index
+            id_values = list(gdf.index)
 
         features: List[StandardizedFeature] = []
         cat_counts: Dict[str, int] = {}
@@ -549,7 +549,7 @@ class FeatureClassifier:
 
             # Extract properties excluding geometry
             props = row.drop("geometry").to_dict()
-            s_id = id_series.iloc[idx]
+            s_id = id_values[idx]
 
             std_feat, rule_match = self.classify_feature(
                 properties=props,

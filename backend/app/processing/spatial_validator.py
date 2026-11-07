@@ -61,19 +61,18 @@ class SpatialValidator(BaseSpatialValidator):
                 overlap_areas.append(0.0)
                 continue
 
-            possible_matches = list(road_sindex.intersection(b_geom.bounds))
-            candidate_roads = r_proj.iloc[possible_matches]
-
+            matches = list(road_sindex.query(b_geom, predicate="intersects"))
             overlap_area = 0.0
-            for r_geom in candidate_roads.geometry:
-                if r_geom is not None and r_geom.is_valid and b_geom.intersects(r_geom):
+            for r_idx in matches:
+                r_geom = r_proj.geometry.iloc[r_idx]
+                if r_geom is not None and r_geom.is_valid and not b_geom.touches(r_geom):
                     inter = b_geom.intersection(r_geom)
-                    if not inter.is_empty:
+                    if not inter.is_empty and inter.area > 1e-6:
                         overlap_area += inter.area
 
-            if overlap_area > 0.01:  # greater than 100 cm²
+            if overlap_area > 1e-6:
                 has_overlap.append(True)
-                overlap_areas.append(round(overlap_area, 2))
+                overlap_areas.append(round(overlap_area, 6))
                 total_overlap_sqm += overlap_area
                 overlap_count += 1
             else:
