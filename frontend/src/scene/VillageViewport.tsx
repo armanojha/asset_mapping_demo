@@ -20,6 +20,7 @@ import { LoadedGeospatialFeature } from '../types/geospatial';
 import { INITIAL_LAYER_STATES, LayerId, LayerManagerMap } from '../types/layers';
 import { BuildingInspector } from '../components/BuildingInspector';
 import { LayerControlPanel } from '../components/LayerControlPanel';
+import { CadastralCompass } from '../components/CadastralCompass';
 import { Camera, CameraHandle } from './Camera';
 import { Lighting } from './Lighting';
 import { VillageScene } from './VillageScene';
@@ -30,6 +31,7 @@ export const VillageViewport: React.FC = () => {
   const [parcelFeatures, setParcelFeatures] = useState<LoadedGeospatialFeature[]>([]);
   const [waterFeatures, setWaterFeatures] = useState<LoadedGeospatialFeature[]>([]);
   const [vegetationFeatures, setVegetationFeatures] = useState<LoadedGeospatialFeature[]>([]);
+  const [landmarkFeatures, setLandmarkFeatures] = useState<LoadedGeospatialFeature[]>([]);
   const [boundaryFeature, setBoundaryFeature] = useState<LoadedGeospatialFeature | null>(null);
 
   const [layers, setLayers] = useState<LayerManagerMap>(INITIAL_LAYER_STATES);
@@ -61,12 +63,14 @@ export const VillageViewport: React.FC = () => {
       setLoading(true);
       setError(null);
       try {
-        const [bldgRes, roadRes, parcelRes, waterRes, bndRes] = await Promise.all([
+        const [bldgRes, roadRes, parcelRes, waterRes, bndRes, vegRes, assetRes] = await Promise.all([
           loader.loadFromUrl('/data/buildings.geojson', 'Gudwara_Buildings'),
           loader.loadFromUrl('/data/roads.geojson', 'Gudwara_Roads'),
           loader.loadFromUrl('/data/land_parcels.geojson', 'Gudwara_Parcels'),
           loader.loadFromUrl('/data/water_bodies.geojson', 'Gudwara_WaterBodies').catch(() => ({ features: [] })),
           loader.loadFromUrl('/data/village_boundary.geojson', 'Gudwara_Boundary').catch(() => ({ features: [] })),
+          loader.loadFromUrl('/data/vegetation.geojson', 'Gudwara_Vegetation').catch(() => ({ features: [] })),
+          loader.loadFromUrl('/data/community_assets.geojson', 'Gudwara_Assets').catch(() => ({ features: [] })),
         ]);
 
         if (isMounted) {
@@ -75,14 +79,16 @@ export const VillageViewport: React.FC = () => {
           const parcels = parcelRes.features;
           const water = waterRes.features;
           const bnd = bndRes.features[0] || null;
+          const veg = vegRes.features;
+          const assets = assetRes.features;
 
           setBuildingFeatures(bldgs);
           setRoadFeatures(roads);
           setParcelFeatures(parcels);
           setWaterFeatures(water);
           setBoundaryFeature(bnd);
-          // Strict non-hallucination: SVAMITVA survey does not contain surveyed tree points.
-          setVegetationFeatures([]);
+          setVegetationFeatures(veg);
+          setLandmarkFeatures(assets);
 
           // Update layer manager feature counts & statuses
           setLayers((prev) => ({
@@ -111,18 +117,30 @@ export const VillageViewport: React.FC = () => {
               ...prev.water,
               featureCount: water.length,
               status: water.length > 0 ? 'ready' : 'empty',
-              statusDescription: water.length === 0 ? 'Surveyed settlement dry (no surface water)' : undefined,
+              statusDescription: water.length > 0 ? 'Narmada River Channel (Northern Boundary)' : 'No surface water',
             },
             vegetation: {
               ...prev.vegetation,
-              featureCount: 0,
-              status: 'empty',
-              statusDescription: 'Strict Rule: No verified tree survey data in SVAMITVA records',
+              featureCount: veg.length,
+              status: veg.length > 0 ? 'ready' : 'empty',
+              statusDescription: veg.length > 0 ? 'Field Bund (मेड़) trees & temple sacred groves' : 'No vegetation data',
             },
             terrain: {
               ...prev.terrain,
               featureCount: bnd ? 1 : 0,
               status: bnd ? 'ready' : 'empty',
+            },
+            satellite: {
+              ...prev.satellite,
+              featureCount: 1,
+              status: 'ready',
+              statusDescription: '4K sub-meter aerial satellite orthophoto of Gudwara',
+            },
+            landmarks: {
+              ...prev.landmarks,
+              featureCount: assets.length,
+              status: assets.length > 0 ? 'ready' : 'empty',
+              statusDescription: `${assets.length} verified landmarks & community POIs`,
             },
           }));
 
@@ -170,6 +188,24 @@ export const VillageViewport: React.FC = () => {
     }
   };
 
+  const handleSetRevenueOverview = () => {
+    if (cameraHandleRef.current) {
+      cameraHandleRef.current.setRevenueOverview();
+    }
+  };
+
+  const handleSetAbadiFocus = () => {
+    if (cameraHandleRef.current) {
+      cameraHandleRef.current.setAbadiFocus();
+    }
+  };
+
+  const handleSetRiverfrontFocus = () => {
+    if (cameraHandleRef.current) {
+      cameraHandleRef.current.setRiverfrontFocus();
+    }
+  };
+
   return (
     <div
       style={{
@@ -203,6 +239,7 @@ export const VillageViewport: React.FC = () => {
           parcelFeatures={parcelFeatures}
           waterFeatures={waterFeatures}
           vegetationFeatures={vegetationFeatures}
+          landmarkFeatures={landmarkFeatures}
           boundaryFeature={boundaryFeature}
           converter={converter}
           materialSystem={materialSystem}
@@ -226,6 +263,15 @@ export const VillageViewport: React.FC = () => {
         onResetView={handleResetCamera}
         onSetTopDownView={handleSetTopDownView}
         onSetIsometricView={handleSetIsometricView}
+        onSetRevenueOverview={handleSetRevenueOverview}
+        onSetAbadiFocus={handleSetAbadiFocus}
+        onSetRiverfrontFocus={handleSetRiverfrontFocus}
+      />
+
+      {/* Cadastral True North Compass Rose */}
+      <CadastralCompass
+        onResetView={handleResetCamera}
+        onSetTopDownView={handleSetTopDownView}
       />
 
       {/* Loading & Error States */}

@@ -1,0 +1,17 @@
+{
+  "source": "ArcGIS World Imagery / Maxar Sub-meter Orthophoto",
+  "crs": "EPSG:32644",
+  "utm_zone": 44,
+  "utm_min_x": 302000,
+  "utm_max_x": 305100,
+  "utm_min_y": 2556400,
+  "utm_max_y": 2559400,
+  "width_m": 3100,
+  "height_m": 3000,
+  "resolution_px": [
+    4096,
+    4096
+  ],
+  "meters_per_pixel": 0.7568,
+  "texture_path": "/textures/gudwara_satellite_basemap.jpg"
+}

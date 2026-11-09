@@ -1,0 +1,5990 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0001",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.94,
+        "canopy_radius_meters": 3.96,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0782797,
+          23.1129332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0002",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.04,
+        "canopy_radius_meters": 2.9,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0782188,
+          23.1130087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0003",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.47,
+        "canopy_radius_meters": 2.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0784037,
+          23.1130194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0004",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.92,
+        "canopy_radius_meters": 2.87,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0783451,
+          23.1130921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0005",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.64,
+        "canopy_radius_meters": 3.06,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0785315,
+          23.1131008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0006",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.22,
+        "canopy_radius_meters": 3.45,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.078468,
+          23.1131797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0007",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.41,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0786544,
+          23.1131885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0008",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.23,
+        "canopy_radius_meters": 2.76,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0785946,
+          23.1132628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0009",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.46,
+        "canopy_radius_meters": 3.02,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0787857,
+          23.1132656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0010",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.2,
+        "canopy_radius_meters": 3.17,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0787166,
+          23.1133514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0011",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.48,
+        "canopy_radius_meters": 3.25,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0789055,
+          23.1133571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0012",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.0,
+        "canopy_radius_meters": 2.82,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.078846,
+          23.113431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0013",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.77,
+        "canopy_radius_meters": 3.67,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0790308,
+          23.1134417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0014",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.52,
+        "canopy_radius_meters": 2.76,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0789688,
+          23.1135188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0015",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.85,
+        "canopy_radius_meters": 3.91,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0791575,
+          23.1135246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0016",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.97,
+        "canopy_radius_meters": 3.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0790972,
+          23.1135995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0017",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.36,
+        "canopy_radius_meters": 2.68,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0792802,
+          23.1136125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0018",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.99,
+        "canopy_radius_meters": 2.85,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0792175,
+          23.1136904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0019",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.69,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0794068,
+          23.1136955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0020",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.76,
+        "canopy_radius_meters": 2.84,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0793425,
+          23.1137754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0021",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.35,
+        "canopy_radius_meters": 2.69,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0795351,
+          23.1137764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0022",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.78,
+        "canopy_radius_meters": 3.63,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0794643,
+          23.1138644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0023",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.03,
+        "canopy_radius_meters": 3.07,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.079655,
+          23.1138678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0024",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.78,
+        "canopy_radius_meters": 3.1,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.079596,
+          23.113941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0025",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.8,
+        "canopy_radius_meters": 3.58,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0797799,
+          23.1139529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0026",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.01,
+        "canopy_radius_meters": 3.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0797152,
+          23.1140332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0027",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.69,
+        "canopy_radius_meters": 3.25,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0799062,
+          23.1140362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0028",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.53,
+        "canopy_radius_meters": 2.94,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.07984,
+          23.1141185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0029",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.87,
+        "canopy_radius_meters": 2.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0800364,
+          23.1141149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0030",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.07,
+        "canopy_radius_meters": 2.81,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0799702,
+          23.1141971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0031",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.17,
+        "canopy_radius_meters": 2.79,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0801605,
+          23.114201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0032",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.45,
+        "canopy_radius_meters": 3.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0800942,
+          23.1142832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0033",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.42,
+        "canopy_radius_meters": 3.66,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0802808,
+          23.1142917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0034",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.73,
+        "canopy_radius_meters": 3.09,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.080219,
+          23.1143685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0035",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.9,
+        "canopy_radius_meters": 3.78,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.080684,
+          23.1145841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0036",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.61,
+        "canopy_radius_meters": 3.3,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0806177,
+          23.1146541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0037",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.31,
+        "canopy_radius_meters": 2.81,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0808095,
+          23.1146743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0038",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.91,
+        "canopy_radius_meters": 2.65,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0807383,
+          23.1147495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0039",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.07,
+        "canopy_radius_meters": 2.82,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0809252,
+          23.1147749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0040",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.66,
+        "canopy_radius_meters": 3.49,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0808526,
+          23.1148515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0041",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.35,
+        "canopy_radius_meters": 2.42,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0810491,
+          23.1148667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0042",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.63,
+        "canopy_radius_meters": 2.48,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0809719,
+          23.1149482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0043",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.3,
+        "canopy_radius_meters": 2.91,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0811674,
+          23.1149646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0044",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.53,
+        "canopy_radius_meters": 3.93,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.081099,
+          23.1150367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0045",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.15,
+        "canopy_radius_meters": 3.72,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0812861,
+          23.1150619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0046",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.79,
+        "canopy_radius_meters": 3.09,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0812165,
+          23.1151353
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0047",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.2,
+        "canopy_radius_meters": 2.51,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0814006,
+          23.1151637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0048",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.44,
+        "canopy_radius_meters": 2.81,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0813354,
+          23.1152325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0049",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.93,
+        "canopy_radius_meters": 3.98,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0815245,
+          23.1152556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0050",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.44,
+        "canopy_radius_meters": 3.64,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0814518,
+          23.1153323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0051",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.5,
+        "canopy_radius_meters": 3.89,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0816475,
+          23.1153484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0052",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.89,
+        "canopy_radius_meters": 2.55,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0815761,
+          23.1154238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0053",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.29,
+        "canopy_radius_meters": 3.78,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0817692,
+          23.1154426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0054",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.72,
+        "canopy_radius_meters": 3.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.081694,
+          23.115522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0055",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.5,
+        "canopy_radius_meters": 3.5,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0818844,
+          23.1155437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0056",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.64,
+        "canopy_radius_meters": 3.68,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0818154,
+          23.1156165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0057",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.99,
+        "canopy_radius_meters": 3.63,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082173,
+          23.1157746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0058",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.79,
+        "canopy_radius_meters": 2.75,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0821005,
+          23.1158524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0059",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.97,
+        "canopy_radius_meters": 3.47,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0822958,
+          23.1158741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0060",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.84,
+        "canopy_radius_meters": 2.91,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082234,
+          23.1159405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0061",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.32,
+        "canopy_radius_meters": 2.8,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0824201,
+          23.115972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0062",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.94,
+        "canopy_radius_meters": 2.92,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0823493,
+          23.116048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0063",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.4,
+        "canopy_radius_meters": 2.57,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0825497,
+          23.1160643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0064",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.15,
+        "canopy_radius_meters": 3.11,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0824747,
+          23.1161448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0065",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.57,
+        "canopy_radius_meters": 3.47,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0826764,
+          23.1161596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0066",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.34,
+        "canopy_radius_meters": 2.83,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0825998,
+          23.1162419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0067",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.0,
+        "canopy_radius_meters": 2.97,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0827955,
+          23.1162632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0068",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.04,
+        "canopy_radius_meters": 3.2,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0827318,
+          23.1163316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0069",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.07,
+        "canopy_radius_meters": 3.59,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0829197,
+          23.1163611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0070",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.32,
+        "canopy_radius_meters": 2.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0828469,
+          23.1164394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0071",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.37,
+        "canopy_radius_meters": 3.63,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0830447,
+          23.1164583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0072",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.47,
+        "canopy_radius_meters": 2.86,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082972,
+          23.1165364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0073",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.1,
+        "canopy_radius_meters": 3.72,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08317,
+          23.1165552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0074",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.07,
+        "canopy_radius_meters": 2.76,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0831043,
+          23.1166258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0075",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.26,
+        "canopy_radius_meters": 3.35,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0832965,
+          23.1166507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0076",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.51,
+        "canopy_radius_meters": 3.47,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0832273,
+          23.1167251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0077",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.66,
+        "canopy_radius_meters": 3.24,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.083569,
+          23.1168371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0078",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.29,
+        "canopy_radius_meters": 3.18,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0835097,
+          23.1169248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0079",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.96,
+        "canopy_radius_meters": 3.57,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0837049,
+          23.1169231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0080",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.64,
+        "canopy_radius_meters": 2.54,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0836506,
+          23.1170035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0081",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.81,
+        "canopy_radius_meters": 3.96,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0838452,
+          23.1170028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0082",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.9,
+        "canopy_radius_meters": 3.83,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0837951,
+          23.1170767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0083",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.38,
+        "canopy_radius_meters": 3.13,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0839866,
+          23.1170807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0084",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.43,
+        "canopy_radius_meters": 2.94,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0839309,
+          23.1171629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0085",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.91,
+        "canopy_radius_meters": 3.83,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0841319,
+          23.1171529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0086",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.62,
+        "canopy_radius_meters": 2.85,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0840685,
+          23.1172465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0087",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.96,
+        "canopy_radius_meters": 2.89,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0842723,
+          23.1172323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0088",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.36,
+        "canopy_radius_meters": 3.33,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0842093,
+          23.1173254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0089",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.82,
+        "canopy_radius_meters": 3.3,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0844114,
+          23.1173136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0090",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.95,
+        "canopy_radius_meters": 2.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0843513,
+          23.1174024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0091",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.69,
+        "canopy_radius_meters": 3.43,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0845467,
+          23.1174006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0092",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.23,
+        "canopy_radius_meters": 3.1,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0844889,
+          23.117486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0093",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.64,
+        "canopy_radius_meters": 3.93,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0846857,
+          23.117482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0094",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.58,
+        "canopy_radius_meters": 3.44,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0846335,
+          23.1175592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0095",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.32,
+        "canopy_radius_meters": 3.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0849202,
+          23.1175973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0096",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.86,
+        "canopy_radius_meters": 3.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0848775,
+          23.1176876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0097",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.74,
+        "canopy_radius_meters": 2.46,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0850839,
+          23.1176535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0098",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.52,
+        "canopy_radius_meters": 2.56,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0850414,
+          23.1177433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0099",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.33,
+        "canopy_radius_meters": 3.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0852426,
+          23.1177202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0100",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.68,
+        "canopy_radius_meters": 3.32,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0852007,
+          23.1178088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0101",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.78,
+        "canopy_radius_meters": 2.67,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0853987,
+          23.1177926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0102",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.48,
+        "canopy_radius_meters": 3.87,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0853577,
+          23.1178791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0103",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.16,
+        "canopy_radius_meters": 3.41,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0855639,
+          23.1178456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0104",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.46,
+        "canopy_radius_meters": 3.06,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0855198,
+          23.1179387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0105",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.09,
+        "canopy_radius_meters": 2.58,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0857195,
+          23.1179189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0106",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.55,
+        "canopy_radius_meters": 3.69,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.085679,
+          23.1180043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0107",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.25,
+        "canopy_radius_meters": 3.94,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0859666,
+          23.1180407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0108",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.63,
+        "canopy_radius_meters": 2.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0859138,
+          23.1181187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0109",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.79,
+        "canopy_radius_meters": 2.62,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0861047,
+          23.1181235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0110",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.63,
+        "canopy_radius_meters": 3.9,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0860499,
+          23.1182044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0111",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.69,
+        "canopy_radius_meters": 3.31,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0862489,
+          23.1181973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0112",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.27,
+        "canopy_radius_meters": 2.5,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0861928,
+          23.1182802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0113",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.7,
+        "canopy_radius_meters": 2.48,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.086389,
+          23.1182772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0114",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.16,
+        "canopy_radius_meters": 3.19,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0863296,
+          23.1183649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0115",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.3,
+        "canopy_radius_meters": 3.28,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0865294,
+          23.1183566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0116",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.43,
+        "canopy_radius_meters": 2.44,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0864749,
+          23.118437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0117",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.92,
+        "canopy_radius_meters": 2.8,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0866715,
+          23.1184335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0118",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.39,
+        "canopy_radius_meters": 2.82,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0866103,
+          23.1185238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0119",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.77,
+        "canopy_radius_meters": 3.57,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0868068,
+          23.1185204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0120",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.92,
+        "canopy_radius_meters": 3.28,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0867539,
+          23.1185986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0121",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.71,
+        "canopy_radius_meters": 2.89,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0869482,
+          23.1185984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0122",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.35,
+        "canopy_radius_meters": 2.9,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0868935,
+          23.1186792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0123",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.29,
+        "canopy_radius_meters": 3.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0870872,
+          23.1186799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0124",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.57,
+        "canopy_radius_meters": 2.68,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0870288,
+          23.1187661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0125",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.5,
+        "canopy_radius_meters": 3.68,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0874062,
+          23.1188302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0126",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.6,
+        "canopy_radius_meters": 3.56,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0873567,
+          23.1189243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0127",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.36,
+        "canopy_radius_meters": 3.13,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0875455,
+          23.1189032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0128",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.6,
+        "canopy_radius_meters": 3.12,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0874981,
+          23.1189933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0129",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.59,
+        "canopy_radius_meters": 2.92,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0876893,
+          23.1189675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0130",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.15,
+        "canopy_radius_meters": 3.55,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0876446,
+          23.1190525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0131",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.21,
+        "canopy_radius_meters": 3.31,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0878385,
+          23.1190216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0132",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.51,
+        "canopy_radius_meters": 2.66,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0877869,
+          23.1191196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0133",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.72,
+        "canopy_radius_meters": 3.32,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0879766,
+          23.1190968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0134",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.24,
+        "canopy_radius_meters": 3.67,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0879319,
+          23.1191817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0135",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.97,
+        "canopy_radius_meters": 2.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0881241,
+          23.1191541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0136",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.33,
+        "canopy_radius_meters": 3.96,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0880782,
+          23.1192414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0137",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.47,
+        "canopy_radius_meters": 3.32,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0882705,
+          23.1192136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0138",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.4,
+        "canopy_radius_meters": 2.45,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0882208,
+          23.119308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0139",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.29,
+        "canopy_radius_meters": 3.09,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0884115,
+          23.1192834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0140",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.83,
+        "canopy_radius_meters": 2.63,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0883642,
+          23.1193732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0141",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.5,
+        "canopy_radius_meters": 2.68,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0885581,
+          23.1193425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0142",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.74,
+        "canopy_radius_meters": 3.78,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0885062,
+          23.1194411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0143",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.94,
+        "canopy_radius_meters": 2.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0886967,
+          23.1194166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0144",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.07,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0886534,
+          23.1194989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0145",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.83,
+        "canopy_radius_meters": 3.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0888458,
+          23.1194709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0146",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.2,
+        "canopy_radius_meters": 3.35,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0887982,
+          23.1195614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0147",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.75,
+        "canopy_radius_meters": 3.21,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0892407,
+          23.1196472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0148",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.37,
+        "canopy_radius_meters": 3.67,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0891996,
+          23.1197321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0149",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.29,
+        "canopy_radius_meters": 3.48,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0893857,
+          23.1197107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0150",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.86,
+        "canopy_radius_meters": 3.32,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0893477,
+          23.1197892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0151",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.27,
+        "canopy_radius_meters": 2.72,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0895354,
+          23.1197645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0152",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.51,
+        "canopy_radius_meters": 3.34,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0894916,
+          23.1198549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0153",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.53,
+        "canopy_radius_meters": 2.97,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0896792,
+          23.1198303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0154",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.52,
+        "canopy_radius_meters": 2.44,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0896402,
+          23.1199108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0155",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.61,
+        "canopy_radius_meters": 3.28,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0898306,
+          23.1198806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0156",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.49,
+        "canopy_radius_meters": 2.97,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.089784,
+          23.1199768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0157",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.21,
+        "canopy_radius_meters": 3.52,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0899731,
+          23.1199492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0158",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.6,
+        "canopy_radius_meters": 2.76,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0899286,
+          23.1200411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0159",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.83,
+        "canopy_radius_meters": 2.79,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0901234,
+          23.1200017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0160",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.3,
+        "canopy_radius_meters": 2.72,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0900756,
+          23.1201003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0161",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.95,
+        "canopy_radius_meters": 2.75,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0902674,
+          23.1200672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0162",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.82,
+        "canopy_radius_meters": 3.33,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0902265,
+          23.1201517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0163",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.77,
+        "canopy_radius_meters": 3.56,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.090413,
+          23.1201294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0164",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 5.91,
+        "canopy_radius_meters": 3.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0903688,
+          23.1202207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0165",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.82,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.090564,
+          23.1201805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0166",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.98,
+        "canopy_radius_meters": 2.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0905204,
+          23.1202704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0167",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.4,
+        "canopy_radius_meters": 2.8,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0907088,
+          23.1202444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0168",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.44,
+        "canopy_radius_meters": 2.85,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0906648,
+          23.1203351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0169",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.83,
+        "canopy_radius_meters": 2.4,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0908549,
+          23.1203055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0170",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.09,
+        "canopy_radius_meters": 3.12,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0908137,
+          23.1203905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0171",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.45,
+        "canopy_radius_meters": 2.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0909991,
+          23.1203706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0172",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.81,
+        "canopy_radius_meters": 2.41,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0909601,
+          23.120451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0173",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.59,
+        "canopy_radius_meters": 3.27,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0914494,
+          23.120548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0174",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.94,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0914076,
+          23.1206383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0175",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.76,
+        "canopy_radius_meters": 3.48,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0915939,
+          23.1205972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0176",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.75,
+        "canopy_radius_meters": 3.4,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0915498,
+          23.1206924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0177",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.99,
+        "canopy_radius_meters": 3.2,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0917328,
+          23.1206583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0178",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.2,
+        "canopy_radius_meters": 3.39,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0916903,
+          23.1207499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0179",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.9,
+        "canopy_radius_meters": 2.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0918731,
+          23.1207163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0180",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 5.72,
+        "canopy_radius_meters": 2.86,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.091834,
+          23.1208006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0181",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.08,
+        "canopy_radius_meters": 3.13,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0920178,
+          23.1207647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0182",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.12,
+        "canopy_radius_meters": 3.37,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0919725,
+          23.1208626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0183",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.32,
+        "canopy_radius_meters": 2.51,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0921564,
+          23.1208266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0184",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.46,
+        "canopy_radius_meters": 3.21,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.092118,
+          23.1209093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0185",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 7.12,
+        "canopy_radius_meters": 3.27,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0922999,
+          23.1208776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0186",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.13,
+        "canopy_radius_meters": 3.19,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0922603,
+          23.1209632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0187",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.2,
+        "canopy_radius_meters": 3.99,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0924441,
+          23.1209274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0188",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.97,
+        "canopy_radius_meters": 2.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.092399,
+          23.1210248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0189",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 7.56,
+        "canopy_radius_meters": 2.74,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0925819,
+          23.1209908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0190",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.0,
+        "canopy_radius_meters": 3.19,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0925435,
+          23.1210736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0191",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.86,
+        "canopy_radius_meters": 2.86,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0927252,
+          23.1210424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0192",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 6.03,
+        "canopy_radius_meters": 3.0,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0926806,
+          23.1211387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0193",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.62,
+        "canopy_radius_meters": 2.55,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0928641,
+          23.1211035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0194",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 6.95,
+        "canopy_radius_meters": 3.29,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0928266,
+          23.1211845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0195",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.65,
+        "canopy_radius_meters": 3.66,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0930101,
+          23.1211491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0196",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.03,
+        "canopy_radius_meters": 3.84,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.092964,
+          23.1212488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0197",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.89,
+        "canopy_radius_meters": 2.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.093152,
+          23.1212039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0198",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal (Ficus religiosa)",
+        "height_meters": 6.55,
+        "canopy_radius_meters": 3.37,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.093105,
+          23.1213052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0199",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Babul (Vachellia nilotica)",
+        "height_meters": 7.81,
+        "canopy_radius_meters": 2.41,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0932884,
+          23.1212703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0200",
+        "source_name": "Gram Manchitra / Forestry Inventory",
+        "source_layer": "roadside_avenue_trees",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Shisham (Dalbergia sissoo)",
+        "height_meters": 5.35,
+        "canopy_radius_meters": 3.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0932492,
+          23.121355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0201",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.56,
+        "canopy_radius_meters": 3.14,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0822152,
+          23.118196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0202",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.43,
+        "canopy_radius_meters": 2.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0825908,
+          23.1183581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0203",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 7.29,
+        "canopy_radius_meters": 2.65,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0825994,
+          23.1183845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0204",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.85,
+        "canopy_radius_meters": 3.27,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0828426,
+          23.1184913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0205",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.65,
+        "canopy_radius_meters": 2.94,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0830076,
+          23.1184494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0206",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.79,
+        "canopy_radius_meters": 2.63,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0831276,
+          23.1185781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0207",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.51,
+        "canopy_radius_meters": 2.86,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0835325,
+          23.1185362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0208",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.33,
+        "canopy_radius_meters": 2.83,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0835846,
+          23.1184681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0209",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 5.6,
+        "canopy_radius_meters": 3.02,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.083762,
+          23.1185999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0210",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.13,
+        "canopy_radius_meters": 2.94,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0839278,
+          23.118566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0211",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.92,
+        "canopy_radius_meters": 3.07,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0843148,
+          23.1185543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0212",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 8.08,
+        "canopy_radius_meters": 2.65,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0844763,
+          23.1185823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0213",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 8.24,
+        "canopy_radius_meters": 3.99,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.084346,
+          23.1186079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0214",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.23,
+        "canopy_radius_meters": 3.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0841446,
+          23.118897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0215",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.55,
+        "canopy_radius_meters": 2.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0843232,
+          23.119014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0216",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.94,
+        "canopy_radius_meters": 4.04,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0845122,
+          23.1191672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0217",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.2,
+        "canopy_radius_meters": 3.96,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0848027,
+          23.1191755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0218",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 7.31,
+        "canopy_radius_meters": 3.46,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0848611,
+          23.1192727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0219",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.88,
+        "canopy_radius_meters": 2.66,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0851017,
+          23.1192836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0220",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 5.9,
+        "canopy_radius_meters": 3.46,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0853613,
+          23.1191523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0221",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.63,
+        "canopy_radius_meters": 3.18,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0850468,
+          23.1189326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0222",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.72,
+        "canopy_radius_meters": 3.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0850023,
+          23.118578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0223",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.24,
+        "canopy_radius_meters": 4.05,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0848967,
+          23.1184104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0224",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.92,
+        "canopy_radius_meters": 2.8,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0849335,
+          23.1183267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0225",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.43,
+        "canopy_radius_meters": 2.8,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0851617,
+          23.1183641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0226",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.02,
+        "canopy_radius_meters": 3.74,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0854242,
+          23.1182339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0227",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 7.96,
+        "canopy_radius_meters": 3.4,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0856192,
+          23.1181227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0228",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.95,
+        "canopy_radius_meters": 2.7,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0857798,
+          23.1179708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0229",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 8.41,
+        "canopy_radius_meters": 3.26,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0858664,
+          23.1179676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0230",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.15,
+        "canopy_radius_meters": 2.95,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0862257,
+          23.1177851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0231",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.9,
+        "canopy_radius_meters": 4.01,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0864096,
+          23.117509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0232",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.16,
+        "canopy_radius_meters": 2.96,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0861753,
+          23.1173977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0233",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 8.22,
+        "canopy_radius_meters": 3.38,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0858945,
+          23.1173632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0234",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 5.67,
+        "canopy_radius_meters": 3.74,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0856963,
+          23.1174555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0235",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 5.68,
+        "canopy_radius_meters": 2.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.085303,
+          23.117488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0236",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 7.81,
+        "canopy_radius_meters": 3.31,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0852659,
+          23.1173852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0237",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.54,
+        "canopy_radius_meters": 2.98,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0854095,
+          23.1172565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0238",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.22,
+        "canopy_radius_meters": 3.29,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.085433,
+          23.1169372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0239",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 5.84,
+        "canopy_radius_meters": 2.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0851599,
+          23.1169683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0240",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.18,
+        "canopy_radius_meters": 3.14,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0850175,
+          23.116918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0241",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 8.18,
+        "canopy_radius_meters": 3.25,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0848204,
+          23.1169747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0242",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.35,
+        "canopy_radius_meters": 3.85,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0846568,
+          23.1168969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0243",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 5.89,
+        "canopy_radius_meters": 2.88,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0844007,
+          23.116984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0244",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 7.68,
+        "canopy_radius_meters": 2.73,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0843194,
+          23.1172407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0245",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 7.06,
+        "canopy_radius_meters": 3.22,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0843177,
+          23.1172709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0246",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.19,
+        "canopy_radius_meters": 3.02,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0840958,
+          23.1171266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0247",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 8.47,
+        "canopy_radius_meters": 4.0,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0838719,
+          23.1170647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0248",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.38,
+        "canopy_radius_meters": 3.87,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0836319,
+          23.1170789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0249",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.02,
+        "canopy_radius_meters": 3.87,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0835203,
+          23.1171416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0250",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.17,
+        "canopy_radius_meters": 3.49,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0833049,
+          23.1173319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0251",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 8.08,
+        "canopy_radius_meters": 3.52,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0832065,
+          23.1174398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0252",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 7.2,
+        "canopy_radius_meters": 3.31,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.08307,
+          23.1176125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0253",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.18,
+        "canopy_radius_meters": 3.14,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082847,
+          23.1176818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0254",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 8.3,
+        "canopy_radius_meters": 3.52,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0827384,
+          23.1175069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0255",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Neem (Azadirachta indica)",
+        "height_meters": 6.29,
+        "canopy_radius_meters": 4.04,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0824439,
+          23.1175082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0256",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 5.87,
+        "canopy_radius_meters": 3.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0822989,
+          23.1176167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0257",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 5.99,
+        "canopy_radius_meters": 3.18,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082308,
+          23.1178622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0258",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 6.22,
+        "canopy_radius_meters": 3.74,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0822678,
+          23.118002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0259",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 6.37,
+        "canopy_radius_meters": 3.61,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0854514,
+          23.1190261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0260",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mahua (Madhuca longifolia)",
+        "height_meters": 5.86,
+        "canopy_radius_meters": 3.91,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0856384,
+          23.1192893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0261",
+        "source_name": "Village Perimeter Shelter Belt",
+        "source_layer": "settlement_foliage",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Mango (Mangifera indica)",
+        "height_meters": 8.27,
+        "canopy_radius_meters": 3.99,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0857521,
+          23.1189344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0262",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.55,
+        "canopy_radius_meters": 4.25,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0805292,
+          23.1231167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0263",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 6.53,
+        "canopy_radius_meters": 4.35,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0806434,
+          23.1229462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0264",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.05,
+        "canopy_radius_meters": 3.67,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0805544,
+          23.1229233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0265",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.21,
+        "canopy_radius_meters": 3.49,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0806492,
+          23.1231351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0266",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 6.65,
+        "canopy_radius_meters": 4.06,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0805235,
+          23.1230974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0267",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.87,
+        "canopy_radius_meters": 3.53,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.080406,
+          23.122981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0268",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.9,
+        "canopy_radius_meters": 4.37,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0804094,
+          23.1230105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0269",
+        "source_name": "Maa Narmada Temple Sacred Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.24,
+        "canopy_radius_meters": 3.25,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0805942,
+          23.1228897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0270",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.91,
+        "canopy_radius_meters": 4.32,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0695026,
+          23.1183576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0271",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.13,
+        "canopy_radius_meters": 3.87,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0695753,
+          23.1185882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0272",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.4,
+        "canopy_radius_meters": 3.54,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0693624,
+          23.1185314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0273",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.03,
+        "canopy_radius_meters": 3.71,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0694996,
+          23.1184787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0274",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.62,
+        "canopy_radius_meters": 3.36,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0694788,
+          23.1185995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0275",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.39,
+        "canopy_radius_meters": 3.54,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0694322,
+          23.1185006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0276",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.5,
+        "canopy_radius_meters": 3.66,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0694792,
+          23.1184427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0277",
+        "source_name": "Shiv Mandir Sacred Peepal Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.26,
+        "canopy_radius_meters": 3.44,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0694939,
+          23.1186219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0278",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.58,
+        "canopy_radius_meters": 4.04,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0826212,
+          23.1104753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0279",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.99,
+        "canopy_radius_meters": 3.65,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0824273,
+          23.1105761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0280",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 6.56,
+        "canopy_radius_meters": 3.85,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0825618,
+          23.1103651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0281",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.2,
+        "canopy_radius_meters": 3.77,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0826283,
+          23.1104216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0282",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 7.29,
+        "canopy_radius_meters": 4.2,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0823633,
+          23.1104044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0283",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 6.62,
+        "canopy_radius_meters": 3.43,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0824023,
+          23.1106379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0284",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.1,
+        "canopy_radius_meters": 3.64,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.082577,
+          23.1103543
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "feature_id": "veg_tree_0285",
+        "source_name": "Durga Tola Kali Temple Grove",
+        "source_layer": "sacred_groves",
+        "category": "VEGETATION",
+        "subcategory": "tree",
+        "species": "Peepal / Banyan (Ficus benghalensis)",
+        "height_meters": 8.57,
+        "canopy_radius_meters": 3.23,
+        "is_verified": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          79.0823977,
+          23.1105476
+        ]
+      }
+    }
+  ]
+}

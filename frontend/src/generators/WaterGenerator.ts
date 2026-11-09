@@ -71,7 +71,16 @@ export class WaterGenerator {
     const waterGroup = new THREE.Group();
     waterGroup.name = `Water_${feature.featureId}`;
 
-    const surfY = this.options.waterSurfaceElevationMeters;
+    const surfY =
+      typeof feature.plinthElevationM === 'number'
+        ? feature.plinthElevationM
+        : this.options.waterSurfaceElevationMeters;
+
+    const bedDepth =
+      typeof feature.properties.depth_meters === 'number' && feature.properties.depth_meters > 0
+        ? feature.properties.depth_meters
+        : this.options.bedDepthMeters;
+
     const geomType = feature.geometryType;
 
     if (geomType === 'Polygon' || geomType === 'MultiPolygon') {
@@ -101,11 +110,11 @@ export class WaterGenerator {
         // 2. Optional Recessed Water Bed Basin
         if (this.options.enableWaterBed) {
           const bedGeom = new THREE.ExtrudeGeometry(shape, {
-            depth: this.options.bedDepthMeters,
+            depth: bedDepth,
             bevelEnabled: false,
           });
           bedGeom.rotateX(-Math.PI / 2);
-          bedGeom.translate(0, surfY - this.options.bedDepthMeters, 0);
+          bedGeom.translate(0, surfY - bedDepth, 0);
           bedGeom.computeVertexNormals();
 
           const bedMesh = new THREE.Mesh(bedGeom, this.materialSystem.waterBedMaterial);

@@ -3,13 +3,15 @@
  */
 
 export type LayerId =
+  | 'satellite'
   | 'buildings'
   | 'roofs'
   | 'roads'
   | 'parcels'
   | 'water'
   | 'vegetation'
-  | 'terrain';
+  | 'terrain'
+  | 'landmarks';
 
 export interface LayerState {
   id: LayerId;
@@ -27,6 +29,18 @@ export interface LayerState {
 export type LayerManagerMap = Record<LayerId, LayerState>;
 
 export const INITIAL_LAYER_STATES: LayerManagerMap = {
+  satellite: {
+    id: 'satellite',
+    name: 'Satellite Imagery',
+    category: 'Landscape',
+    visible: true,
+    enabled: true,
+    opacity: 1.0,
+    featureCount: 1,
+    status: 'ready',
+    statusDescription: 'High-res sub-meter aerial satellite orthophoto',
+    colorSwatch: '#15803d',
+  },
   buildings: {
     id: 'buildings',
     name: 'Buildings',
@@ -67,7 +81,7 @@ export const INITIAL_LAYER_STATES: LayerManagerMap = {
     id: 'parcels',
     name: 'Land Parcels',
     category: 'Cadastral',
-    visible: true,
+    visible: false,
     enabled: true,
     opacity: 1.0,
     featureCount: 0,
@@ -79,12 +93,12 @@ export const INITIAL_LAYER_STATES: LayerManagerMap = {
     id: 'water',
     name: 'Water Bodies',
     category: 'Hydrology',
-    visible: true,
+    visible: false,
     enabled: true,
     opacity: 0.88,
     featureCount: 0,
     status: 'empty',
-    statusDescription: 'Surveyed pond basins (dry in SVAMITVA survey)',
+    statusDescription: 'Narmada River northern boundary water channel',
     colorSwatch: '#2b7a78',
   },
   vegetation: {
@@ -110,5 +124,17 @@ export const INITIAL_LAYER_STATES: LayerManagerMap = {
     status: 'ready',
     statusDescription: 'Cadastral boundary sandstone diorama pedestal',
     colorSwatch: '#5a4634',
+  },
+  landmarks: {
+    id: 'landmarks',
+    name: 'Landmarks & POIs',
+    category: 'Community',
+    visible: true,
+    enabled: true,
+    opacity: 1.0,
+    featureCount: 8,
+    status: 'ready',
+    statusDescription: 'Key village institutions, temples & community pins',
+    colorSwatch: '#f59e0b',
   },
 };

@@ -21,7 +21,9 @@ export interface RoadGeneratorOptions {
   pavedRoadWidthMeters?: number;      // Default: 6.0m
   villageRoadWidthMeters?: number;    // Default: 4.0m
   pathWidthMeters?: number;           // Default: 2.5m
-  verticalElevationMeters?: number;   // Default: 0.00m (Tier 1)
+  verticalElevationMeters?: number;   // Default: 0.04m (Tier 1)
+  enableCurbs?: boolean;              // Default: true
+  curbElevationOffsetMeters?: number; // Default: 0.035m (sits at +0.075m)
   maxMiterRatio?: number;             // Default: 2.5 (prevents spikes at sharp turns)
   roundCaps?: boolean;                // Default: true
 }
@@ -70,7 +72,9 @@ export class RoadGenerator {
       pavedRoadWidthMeters: options.pavedRoadWidthMeters ?? 6.0,
       villageRoadWidthMeters: options.villageRoadWidthMeters ?? 4.0,
       pathWidthMeters: options.pathWidthMeters ?? 2.5,
-      verticalElevationMeters: options.verticalElevationMeters ?? 0.03,
+      verticalElevationMeters: options.verticalElevationMeters ?? 0.00,
+      enableCurbs: options.enableCurbs ?? false,
+      curbElevationOffsetMeters: options.curbElevationOffsetMeters ?? 0.035,
       maxMiterRatio: options.maxMiterRatio ?? 2.5,
       roundCaps: options.roundCaps ?? true,
     };
@@ -118,6 +122,20 @@ export class RoadGenerator {
         const mesh = new THREE.Mesh(geom, material);
         mesh.receiveShadow = true;
         roadGroup.add(mesh);
+
+        // Raised stone curb outline for visual demarcation
+        if (this.options.enableCurbs) {
+          const curbGeom = this.createCurbLineSegments(
+            exterior2D,
+            holes2D,
+            elevY + this.options.curbElevationOffsetMeters
+          );
+          if (curbGeom) {
+            const curbLine = new THREE.LineSegments(curbGeom, this.materialSystem.roadCurbMaterial);
+            curbLine.name = `RoadCurb_${feature.featureId}`;
+            roadGroup.add(curbLine);
+          }
+        }
       }
     } else if (geomType === 'LineString' || geomType === 'MultiLineString') {
       // Centerline ribbon extrusion
@@ -135,6 +153,23 @@ export class RoadGenerator {
           const mesh = new THREE.Mesh(ribbonGeom, material);
           mesh.receiveShadow = true;
           roadGroup.add(mesh);
+        }
+
+        // Raised curb lines along outer ribbon edges
+        if (this.options.enableCurbs) {
+          const ribbonCurbGeom = this.createRibbonCurbLineSegments(
+            points2D,
+            widthResult.widthMeters,
+            elevY + this.options.curbElevationOffsetMeters
+          );
+          if (ribbonCurbGeom) {
+            const ribbonCurbLine = new THREE.LineSegments(
+              ribbonCurbGeom,
+              this.materialSystem.roadCurbMaterial
+            );
+            ribbonCurbLine.name = `RoadRibbonCurb_${feature.featureId}`;
+            roadGroup.add(ribbonCurbLine);
+          }
         }
       }
     } else {
@@ -394,7 +429,10 @@ export class RoadGenerator {
 
   private resolveRoadMaterial(feature: LoadedGeospatialFeature): THREE.MeshStandardMaterial {
     const sub = (feature.subcategory || '').toLowerCase();
-    if (sub.includes('paved') || sub.includes('highway') || sub.includes('major')) {
+    if (sub.includes('shoulder')) {
+      return this.materialSystem.roadShoulderMaterial;
+    }
+    if (sub.includes('paved') || sub.includes('highway') || sub.includes('major') || sub.includes('asphalt')) {
       return this.materialSystem.asphaltRoadMaterial;
     }
     return this.materialSystem.earthenRoadMaterial;
@@ -432,6 +470,122 @@ export class RoadGenerator {
       shape.holes.push(p);
     }
     return shape;
+  }
+
+  /**
+   * Constructs raised line segments along polygon exterior boundaries and interior holes.
+   */
+  private createCurbLineSegments(
+    exterior: [number, number][],
+    holes: [number, number][][],
+    elevationY: number
+  ): THREE.BufferGeometry | null {
+    const positions: number[] = [];
+
+    const addRingLines = (ring: [number, number][]) => {
+      const n = ring.length;
+      if (n < 2) return;
+      for (let i = 0; i < n - 1; i++) {
+        const p1 = ring[i];
+        const p2 = ring[i + 1];
+        positions.push(p1[0], elevationY, -p1[1]);
+        positions.push(p2[0], elevationY, -p2[1]);
+      }
+    };
+
+    addRingLines(exterior);
+    for (const h of holes) {
+      addRingLines(h);
+    }
+
+    if (positions.length === 0) return null;
+
+    const geom = new THREE.BufferGeometry();
+    geom.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    return geom;
+  }
+
+  /**
+   * Constructs raised curb line segments along the left and right edges of a ribbon road.
+   */
+  private createRibbonCurbLineSegments(
+    points2D: [number, number][],
+    width: number,
+    elevationY: number
+  ): THREE.BufferGeometry | null {
+    const cleanPoints: [number, number][] = [];
+    for (let i = 0; i < points2D.length; i++) {
+      if (i === 0 || !this.arePointsEqual(points2D[i], points2D[i - 1])) {
+        cleanPoints.push(points2D[i]);
+      }
+    }
+    if (cleanPoints.length < 2) return null;
+
+    const halfWidth = width / 2.0;
+    const n = cleanPoints.length;
+    const segNormals: [number, number][] = [];
+
+    for (let i = 0; i < n - 1; i++) {
+      const dx = cleanPoints[i + 1][0] - cleanPoints[i][0];
+      const dy = cleanPoints[i + 1][1] - cleanPoints[i][1];
+      const len = Math.sqrt(dx * dx + dy * dy);
+      if (len > 1e-6) {
+        segNormals.push([-dy / len, dx / len]);
+      } else {
+        segNormals.push([0, 1]);
+      }
+    }
+
+    const leftVertices: [number, number][] = [];
+    const rightVertices: [number, number][] = [];
+
+    for (let i = 0; i < n; i++) {
+      const p = cleanPoints[i];
+      let nx: number;
+      let ny: number;
+      let miterLength = 1.0;
+
+      if (i === 0) {
+        nx = segNormals[0][0];
+        ny = segNormals[0][1];
+      } else if (i === n - 1) {
+        nx = segNormals[n - 2][0];
+        ny = segNormals[n - 2][1];
+      } else {
+        const n1 = segNormals[i - 1];
+        const n2 = segNormals[i];
+        const mx = (n1[0] + n2[0]) / 2.0;
+        const my = (n1[1] + n2[1]) / 2.0;
+        const mLen = Math.sqrt(mx * mx + my * my);
+        if (mLen > 1e-4) {
+          nx = mx / mLen;
+          ny = my / mLen;
+          const dot = nx * n1[0] + ny * n1[1];
+          miterLength = dot > 0.1 ? Math.min(this.options.maxMiterRatio, 1.0 / dot) : 1.0;
+        } else {
+          nx = n1[0];
+          ny = n1[1];
+        }
+      }
+
+      const offsetDist = halfWidth * miterLength;
+      leftVertices.push([p[0] + nx * offsetDist, p[1] + ny * offsetDist]);
+      rightVertices.push([p[0] - nx * offsetDist, p[1] - ny * offsetDist]);
+    }
+
+    const positions: number[] = [];
+    for (let i = 0; i < n - 1; i++) {
+      // Left edge line
+      positions.push(leftVertices[i][0], elevationY, -leftVertices[i][1]);
+      positions.push(leftVertices[i + 1][0], elevationY, -leftVertices[i + 1][1]);
+      // Right edge line
+      positions.push(rightVertices[i][0], elevationY, -rightVertices[i][1]);
+      positions.push(rightVertices[i + 1][0], elevationY, -rightVertices[i + 1][1]);
+    }
+
+    const geom = new THREE.BufferGeometry();
+    geom.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    return geom;
   }
 
   private arePointsEqual(p1: [number, number], p2: [number, number]): boolean {

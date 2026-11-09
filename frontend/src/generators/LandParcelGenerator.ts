@@ -106,17 +106,19 @@ export class LandParcelGenerator {
       geom.translate(0, surfY, 0);
       geom.computeVertexNormals();
 
-      const mesh = new THREE.Mesh(geom, this.materialSystem.parcelMaterial);
+      const material = this.resolveParcelMaterial(feature);
+      const mesh = new THREE.Mesh(geom, material);
       mesh.name = `ParcelSurface_${feature.featureId}_part${partIdx}`;
       mesh.receiveShadow = true;
       parcelGroup.add(mesh);
       surfaceMeshes.push(mesh);
 
-      // 2. Cadastral Boundary Stroke Lines (LineSegments)
+      // 2. Cadastral Boundary Stroke Lines (LineSegments / Field Bunds)
       if (this.options.enableBorderOutlines) {
         const borderGeom = this.createBoundaryLineSegments(exterior2D, holes2D, borderY);
         if (borderGeom) {
-          const lineSegments = new THREE.LineSegments(borderGeom, this.materialSystem.parcelBorderMaterial);
+          const borderMaterial = this.resolveBorderMaterial(feature);
+          const lineSegments = new THREE.LineSegments(borderGeom, borderMaterial);
           lineSegments.name = `ParcelBorder_${feature.featureId}_part${partIdx}`;
           parcelGroup.add(lineSegments);
           borderLinesList.push(lineSegments);
@@ -151,6 +153,37 @@ export class LandParcelGenerator {
       borderLines: borderLinesList[0],
       metadata,
     };
+  }
+
+  private resolveParcelMaterial(feature: LoadedGeospatialFeature): THREE.MeshStandardMaterial {
+    const sub = (feature.subcategory || '').toLowerCase();
+    if (sub.includes('black_cotton') || sub.includes('cotton') || sub.includes('regur')) {
+      return this.materialSystem.blackCottonSoilMaterial;
+    }
+    if (sub.includes('settlement_ground') || sub.includes('abadi_ground') || sub.includes('courtyard')) {
+      return this.materialSystem.settlementGroundMaterial;
+    }
+    if (sub.includes('cropland') || sub.includes('farm') || sub.includes('agri')) {
+      return this.materialSystem.croplandMaterial;
+    }
+    if (sub.includes('fallow') || sub.includes('loam')) {
+      return this.materialSystem.fallowFieldMaterial;
+    }
+    if (sub.includes('common') || sub.includes('pasture') || sub.includes('gauchar')) {
+      return this.materialSystem.villageCommonsMaterial;
+    }
+    return this.materialSystem.parcelMaterial;
+  }
+
+  private resolveBorderMaterial(feature: LoadedGeospatialFeature): THREE.LineBasicMaterial {
+    const sub = (feature.subcategory || '').toLowerCase();
+    if (sub.includes('settlement_ground')) {
+      return this.materialSystem.parcelBorderMaterial;
+    }
+    if (sub.includes('cropland') || sub.includes('farm') || sub.includes('fallow') || sub.includes('agri') || sub.includes('cotton')) {
+      return this.materialSystem.fieldBundLineMaterial;
+    }
+    return this.materialSystem.parcelBorderMaterial;
   }
 
   private createBoundaryLineSegments(

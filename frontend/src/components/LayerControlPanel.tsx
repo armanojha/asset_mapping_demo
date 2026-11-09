@@ -18,6 +18,9 @@ export interface LayerControlPanelProps {
   onResetView: () => void;
   onSetTopDownView: () => void;
   onSetIsometricView: () => void;
+  onSetRevenueOverview?: () => void;
+  onSetAbadiFocus?: () => void;
+  onSetRiverfrontFocus?: () => void;
 }
 
 export const LayerControlPanel: React.FC<LayerControlPanelProps> = ({
@@ -30,6 +33,9 @@ export const LayerControlPanel: React.FC<LayerControlPanelProps> = ({
   onResetView,
   onSetTopDownView,
   onSetIsometricView,
+  onSetRevenueOverview,
+  onSetAbadiFocus,
+  onSetRiverfrontFocus,
 }) => {
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
@@ -264,6 +270,59 @@ export const LayerControlPanel: React.FC<LayerControlPanelProps> = ({
                 Top-Down Cadastral
               </button>
             </div>
+
+            {/* Geographical Macro & Micro Focus Presets */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.25rem', marginTop: '0.2rem' }}>
+              <button
+                onClick={onSetRevenueOverview}
+                title="View full 193 Hectare Revenue Village (Mauza) boundary and fields"
+                style={{
+                  background: '#15803d',
+                  border: 'none',
+                  color: '#ffffff',
+                  padding: '4px 4px',
+                  borderRadius: '6px',
+                  fontSize: '0.68rem',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                }}
+              >
+                Mauza 750Ha
+              </button>
+              <button
+                onClick={onSetAbadiFocus}
+                title="Focus on central Abadi residential settlement houses"
+                style={{
+                  background: '#b45309',
+                  border: 'none',
+                  color: '#ffffff',
+                  padding: '4px 4px',
+                  borderRadius: '6px',
+                  fontSize: '0.68rem',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                }}
+              >
+                Abadi Houses
+              </button>
+              <button
+                onClick={onSetRiverfrontFocus}
+                title="Focus on Narmada River channel and Maa Narmada Mandir"
+                style={{
+                  background: '#0f766e',
+                  border: 'none',
+                  color: '#ffffff',
+                  padding: '4px 4px',
+                  borderRadius: '6px',
+                  fontSize: '0.68rem',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                }}
+              >
+                Narmada River
+              </button>
+            </div>
+
             <button
               onClick={onResetView}
               style={{

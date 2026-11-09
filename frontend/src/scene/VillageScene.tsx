@@ -22,6 +22,7 @@ import { WaterGenerator } from '../generators/WaterGenerator';
 import { LandParcelGenerator } from '../generators/LandParcelGenerator';
 import { VegetationGenerator } from '../generators/VegetationGenerator';
 import { DemGridData, TerrainGenerator } from '../generators/TerrainGenerator';
+import { LandmarkPins } from '../components/LandmarkPins';
 import { BuildingMaterialSystem } from '../materials/BuildingMaterials';
 import { LoadedGeospatialFeature } from '../types/geospatial';
 import { LayerManagerMap } from '../types/layers';
@@ -32,6 +33,7 @@ export interface VillageSceneProps {
   parcelFeatures: LoadedGeospatialFeature[];
   waterFeatures?: LoadedGeospatialFeature[];
   vegetationFeatures?: LoadedGeospatialFeature[];
+  landmarkFeatures?: LoadedGeospatialFeature[];
   boundaryFeature?: LoadedGeospatialFeature | null;
   demData?: DemGridData | null;
   converter: CoordinateConverter;
@@ -169,6 +171,7 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
   parcelFeatures,
   waterFeatures = [],
   vegetationFeatures = [],
+  landmarkFeatures = [],
   boundaryFeature = null,
   demData = null,
   converter,
@@ -202,7 +205,9 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
   const roadGenerator = useMemo(() => {
     return new RoadGenerator(
       {
-        verticalElevationMeters: 0.03, // Raised curb height above parcel plane
+        verticalElevationMeters: 0.04, // Raised road surface above parcel plane
+        enableCurbs: true,             // 3D raised stone curb contours for visual definition
+        curbElevationOffsetMeters: 0.035,
       },
       materialSystem
     );
@@ -225,11 +230,12 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
       {
         verticalExaggeration: 1.2,
         pedestalDepthMeters: 6.0,
-        surfaceElevationOffsetMeters: -0.05,
+        surfaceElevationOffsetMeters: -0.06,
+        useSatelliteBasemap: layers.satellite ? layers.satellite.visible : true,
       },
       materialSystem
     );
-  }, [materialSystem]);
+  }, [materialSystem, layers.satellite?.visible]);
 
   // 2. Terrain & Diorama Pedestal Object
   const terrainObject = useMemo(() => {
@@ -317,6 +323,15 @@ export const VillageScene: React.FC<VillageSceneProps> = ({
             />
           ))}
         </group>
+      )}
+
+      {/* TIER 3: Community Assets & Landmark Pins (Phase E) */}
+      {layers.landmarks?.visible && landmarkFeatures && landmarkFeatures.length > 0 && (
+        <LandmarkPins
+          assets={landmarkFeatures}
+          converter={converter}
+          visible={layers.landmarks.visible}
+        />
       )}
     </group>
   );

@@ -19,33 +19,36 @@ export interface CameraHandle {
   resetCamera: () => void;
   setTopDownView: () => void;
   setIsometricView: () => void;
+  setRevenueOverview: () => void;
+  setAbadiFocus: () => void;
+  setRiverfrontFocus: () => void;
   focusOnCoordinates: (x: number, z: number, targetZoom?: number) => void;
   getControls: () => OrbitControlsImpl | null;
 }
 
 export interface CameraProps {
-  isometricDistance?: number;   // Distance parameter D for position [D, D, D] (Default: 220)
-  zoom?: number;                // Initial orthographic zoom level (Default: 2.4)
+  isometricDistance?: number;   // Distance parameter D for position [D, D, D] (Default: 350)
+  zoom?: number;                // Initial orthographic zoom level (Default: 1.4)
   target?: [number, number, number]; // Initial target (Default: [0, 0, 0])
   enableDamping?: boolean;      // Default: true
   dampingFactor?: number;       // Default: 0.05
-  minZoom?: number;             // Default: 0.8
-  maxZoom?: number;             // Default: 12.0
-  boundaryExtentMeters?: number; // Distance in meters from origin before panning is clamped (Default: 380)
+  minZoom?: number;             // Default: 0.35
+  maxZoom?: number;             // Default: 16.0
+  boundaryExtentMeters?: number; // Distance in meters from origin before panning is clamped (Default: 2000)
   enableRotate?: boolean;       // Default: true
 }
 
 export const Camera = forwardRef<CameraHandle, CameraProps>(
   (
     {
-      isometricDistance = 220,
-      zoom = 2.4,
+      isometricDistance = 350,
+      zoom = 1.4,
       target = [0, 0, 0],
       enableDamping = true,
       dampingFactor = 0.05,
-      minZoom = 0.8,
-      maxZoom = 12.0,
-      boundaryExtentMeters = 380,
+      minZoom = 0.20,
+      maxZoom = 16.0,
+      boundaryExtentMeters = 2500,
       enableRotate = true,
     },
     ref
@@ -83,6 +86,45 @@ export const Camera = forwardRef<CameraHandle, CameraProps>(
             defaultPosition[2]
           );
           cameraRef.current.zoom = zoom;
+          cameraRef.current.updateProjectionMatrix();
+          controlsRef.current.update();
+        }
+      },
+      setRevenueOverview: () => {
+        if (controlsRef.current && cameraRef.current) {
+          controlsRef.current.target.set(0, 0, -200);
+          controlsRef.current.object.position.set(
+            defaultPosition[0] * 2.5,
+            defaultPosition[1] * 2.5,
+            defaultPosition[2] * 2.5
+          );
+          cameraRef.current.zoom = 0.35;
+          cameraRef.current.updateProjectionMatrix();
+          controlsRef.current.update();
+        }
+      },
+      setAbadiFocus: () => {
+        if (controlsRef.current && cameraRef.current) {
+          controlsRef.current.target.set(0, 0, 0);
+          controlsRef.current.object.position.set(
+            defaultPosition[0] * 0.7,
+            defaultPosition[1] * 0.7,
+            defaultPosition[2] * 0.7
+          );
+          cameraRef.current.zoom = 2.4;
+          cameraRef.current.updateProjectionMatrix();
+          controlsRef.current.update();
+        }
+      },
+      setRiverfrontFocus: () => {
+        if (controlsRef.current && cameraRef.current) {
+          controlsRef.current.target.set(0, 0, -520);
+          controlsRef.current.object.position.set(
+            defaultPosition[0] * 0.8,
+            defaultPosition[1] * 0.8,
+            defaultPosition[2] * 0.8 - 520
+          );
+          cameraRef.current.zoom = 1.6;
           cameraRef.current.updateProjectionMatrix();
           controlsRef.current.update();
         }

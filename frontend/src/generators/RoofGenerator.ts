@@ -67,7 +67,7 @@ export class RoofGenerator {
     switch (resolvedType) {
       case 'gabled_tile':
       case 'gable':
-        result = this.generateGableRoof(exteriorPoints2D, wallTopY, isEstimated, method);
+        result = this.generateGableRoof(exteriorPoints2D, wallTopY, isEstimated, method, featureAttributes);
         break;
       case 'hipped':
       case 'hip':
@@ -199,7 +199,8 @@ export class RoofGenerator {
     points2D: [number, number][],
     wallTopY: number,
     isEstimated: boolean,
-    method: string
+    method: string,
+    featureAttributes?: Record<string, any>
   ): GeneratedRoofResult {
     // If footprint is too complex / irregular, fall back to flat terrace
     if (points2D.length < 4 || !this.isPitchedRoofCandidate(points2D)) {
@@ -329,7 +330,8 @@ export class RoofGenerator {
     roofGeom.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
     roofGeom.computeVertexNormals();
 
-    const roofMesh = new THREE.Mesh(roofGeom, this.materialSystem.gableRoofMaterial);
+    const roofMaterial = this.resolveGableMaterial(featureAttributes, points2D);
+    const roofMesh = new THREE.Mesh(roofGeom, roofMaterial);
     roofMesh.castShadow = true;
     roofMesh.receiveShadow = true;
     roofGroup.add(roofMesh);
@@ -342,6 +344,45 @@ export class RoofGenerator {
       roofHeightMeters: ridgeHeight,
       fallbackApplied: false,
     };
+  }
+
+  private resolveGableMaterial(
+    props?: Record<string, any>,
+    points2D?: [number, number][]
+  ): THREE.MeshStandardMaterial {
+    const rawMat = (
+      props?.roof_material ||
+      props?.['roof:material'] ||
+      props?._procedural_roof_material ||
+      ''
+    ).toLowerCase();
+
+    if (
+      rawMat.includes('tin') ||
+      rawMat.includes('metal') ||
+      rawMat.includes('sheet') ||
+      rawMat.includes('zinc') ||
+      rawMat.includes('iron')
+    ) {
+      return this.materialSystem.tinRoofMaterial;
+    }
+
+    // Deterministic spatial hash for vernacular Central Indian mix: ~25% tin sheets / 75% terracotta tiles
+    if (props?.feature_id || (points2D && points2D.length > 0)) {
+      const seedStr =
+        props?.feature_id ||
+        `${points2D![0][0].toFixed(2)}_${points2D![0][1].toFixed(2)}`;
+      let hash = 0;
+      for (let i = 0; i < seedStr.length; i++) {
+        hash = (hash << 5) - hash + seedStr.charCodeAt(i);
+        hash |= 0;
+      }
+      if (Math.abs(hash) % 100 < 25) {
+        return this.materialSystem.tinRoofMaterial;
+      }
+    }
+
+    return this.materialSystem.gableRoofMaterial;
   }
 
   // =========================================================================

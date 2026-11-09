@@ -35,6 +35,8 @@ export interface TerrainGeneratorOptions {
   enableDioramaPedestal?: boolean;       // Default: true
   enableBoundaryCurb?: boolean;          // Default: true
   meshResolutionSegments?: number;       // Default: 48 (grid density when DEM is active)
+  useSatelliteBasemap?: boolean;         // Default: true
+  satelliteUtmBounds?: [number, number, number, number]; // [minX, minY, maxX, maxY]
 }
 
 export interface Terrain3DMetadata {
@@ -77,6 +79,8 @@ export class TerrainGenerator {
       enableDioramaPedestal: options.enableDioramaPedestal ?? true,
       enableBoundaryCurb: options.enableBoundaryCurb ?? true,
       meshResolutionSegments: options.meshResolutionSegments ?? 48,
+      useSatelliteBasemap: options.useSatelliteBasemap ?? true,
+      satelliteUtmBounds: options.satelliteUtmBounds ?? [302000, 2556400, 305100, 2559400],
     };
     this.materialSystem = materialSystem || BuildingMaterialSystem.getInstance();
   }
@@ -132,7 +136,7 @@ export class TerrainGenerator {
       maxElev = demData.maxElevationM;
     } else {
       // Build Flat Cadastral Surface Mesh (honest fallback - never invent fake hills)
-      surfaceMesh = this.buildFlatSurfaceMesh(exterior2D, interior2DList);
+      surfaceMesh = this.buildFlatSurfaceMesh(exterior2D, interior2DList, converter);
     }
 
     surfaceMesh.name = `TerrainSurface_${boundaryFeature.featureId}`;
@@ -181,10 +185,12 @@ export class TerrainGenerator {
 
   /**
    * Builds flat cadastral terrain surface mesh bounded by the village perimeter.
+   * Maps conformal UTM UV coordinates for exact satellite basemap alignment.
    */
   private buildFlatSurfaceMesh(
     exterior: [number, number][],
-    holes: [number, number][][]
+    holes: [number, number][][],
+    converter: CoordinateConverter
   ): THREE.Mesh {
     const shape = this.createShapeWithHoles(exterior, holes);
     const geom = new THREE.ShapeGeometry(shape);
@@ -192,7 +198,34 @@ export class TerrainGenerator {
     geom.translate(0, this.options.surfaceElevationOffsetMeters, 0);
     geom.computeVertexNormals();
 
-    return new THREE.Mesh(geom, this.materialSystem.terrainMaterial);
+    // Map exact conformal UTM-anchored UV coordinates
+    const [minUtmX, minUtmY, maxUtmX, maxUtmY] = this.options.satelliteUtmBounds;
+    const origin = converter.getAnchor();
+    const localMinX = minUtmX - origin.originXUtm;
+    const localMaxX = maxUtmX - origin.originXUtm;
+    const localMinZ = -(maxUtmY - origin.originYUtm); // North = top of image
+    const localMaxZ = -(minUtmY - origin.originYUtm); // South = bottom of image
+
+    const posAttr = geom.getAttribute('position');
+    const uvs: number[] = [];
+    const count = posAttr.count;
+
+    for (let i = 0; i < count; i++) {
+      const x = posAttr.getX(i);
+      const z = posAttr.getZ(i);
+
+      const u = (x - localMinX) / (localMaxX - localMinX);
+      const v = (localMaxZ - z) / (localMaxZ - localMinZ);
+      uvs.push(Math.max(0, Math.min(1, u)), Math.max(0, Math.min(1, v)));
+    }
+
+    geom.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+
+    const material = this.options.useSatelliteBasemap
+      ? this.materialSystem.satelliteBasemapMaterial
+      : this.materialSystem.terrainMaterial;
+
+    return new THREE.Mesh(geom, material);
   }
 
   /**
@@ -206,17 +239,20 @@ export class TerrainGenerator {
 
     const extrudeSettings: THREE.ExtrudeGeometryOptions = {
       depth: this.options.pedestalDepthMeters,
-      bevelEnabled: true,
-      bevelSegments: 2,
-      bevelSize: 0.20,
-      bevelThickness: 0.15,
+      bevelEnabled: false,
     };
 
     const geom = new THREE.ExtrudeGeometry(shape, extrudeSettings);
-    // In Three.js, extrude is along +Z. Rotate so extrusion is along -Y (downward).
-    geom.rotateX(Math.PI / 2);
-    // Align top surface with terrain elevation offset
-    geom.translate(0, this.options.surfaceElevationOffsetMeters, 0);
+    // In Three.js, extrude is along +Z. Rotate by -PI/2 so (X, Y) maps to (X, -Z)
+    // exactly matching Three.js world coordinates (+X = East, -Z = North).
+    geom.rotateX(-Math.PI / 2);
+    // Translate downwards so top surface sits at surfaceElevationOffsetMeters
+    // and bottom base extends downward to -pedestalDepthMeters.
+    geom.translate(
+      0,
+      this.options.surfaceElevationOffsetMeters - this.options.pedestalDepthMeters,
+      0
+    );
     geom.computeVertexNormals();
 
     const mesh = new THREE.Mesh(geom, this.materialSystem.dioramaPedestalMaterial);
@@ -240,7 +276,7 @@ export class TerrainGenerator {
     }
 
     const geom = new THREE.BufferGeometry().setFromPoints(points);
-    return new THREE.LineSegments(geom, this.materialSystem.dioramaBevelMaterial);
+    return new THREE.LineSegments(geom, this.materialSystem.villageBoundaryLineMaterial);
   }
 
   /**

@@ -222,7 +222,12 @@ export class GeoJSONLoader {
 
     // Vertical staging and procedural parameters
     const verticalTier = typeof props._vertical_tier === 'number' ? props._vertical_tier : 0;
-    const plinthElevationM = typeof props._plinth_elevation_m === 'number' ? props._plinth_elevation_m : 0.0;
+    const plinthElevationM =
+      typeof props._plinth_elevation_m === 'number'
+        ? props._plinth_elevation_m
+        : typeof props.plinth_elevation_m === 'number'
+        ? props.plinth_elevation_m
+        : 0.0;
     const heightMeters =
       typeof props._procedural_height_m === 'number'
         ? props._procedural_height_m

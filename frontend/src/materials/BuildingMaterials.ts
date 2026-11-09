@@ -23,10 +23,18 @@ export interface MaterialPaletteConfig {
   roofGableColor?: string;
   roofHipColor?: string;
   roofRidgeColor?: string;
+  roofTinColor?: string;
   asphaltRoadColor?: string;
   earthenRoadColor?: string;
   waterColor?: string;
   waterBedColor?: string;
+  roadCurbColor?: string;
+  roadShoulderColor?: string;
+  croplandColor?: string;
+  fallowFieldColor?: string;
+  villageCommonsColor?: string;
+  blackCottonSoilColor?: string;
+  settlementGroundColor?: string;
   parcelColor?: string;
   parcelBorderColor?: string;
   foliageColor?: string;
@@ -56,17 +64,26 @@ export class BuildingMaterialSystem {
   public readonly gableRoofMaterial: THREE.MeshStandardMaterial;
   public readonly hipRoofMaterial: THREE.MeshStandardMaterial;
   public readonly roofRidgeMaterial: THREE.MeshStandardMaterial;
+  public readonly tinRoofMaterial: THREE.MeshStandardMaterial;
 
   // Road Materials
   public readonly asphaltRoadMaterial: THREE.MeshStandardMaterial;
   public readonly earthenRoadMaterial: THREE.MeshStandardMaterial;
+  public readonly roadCurbMaterial: THREE.LineBasicMaterial;
+  public readonly roadShoulderMaterial: THREE.MeshStandardMaterial;
 
   // Water Materials
   public readonly waterSurfaceMaterial: THREE.MeshStandardMaterial;
   public readonly waterBedMaterial: THREE.MeshStandardMaterial;
 
-  // Land Parcel Materials
+  // Land Parcel & Cadastral Materials
   public readonly parcelMaterial: THREE.MeshStandardMaterial;
+  public readonly croplandMaterial: THREE.MeshStandardMaterial;
+  public readonly fallowFieldMaterial: THREE.MeshStandardMaterial;
+  public readonly villageCommonsMaterial: THREE.MeshStandardMaterial;
+  public readonly blackCottonSoilMaterial: THREE.MeshStandardMaterial;
+  public readonly settlementGroundMaterial: THREE.MeshStandardMaterial;
+  public readonly fieldBundLineMaterial: THREE.LineBasicMaterial;
   public readonly parcelBorderMaterial: THREE.LineBasicMaterial;
   public readonly villageBoundaryLineMaterial: THREE.LineBasicMaterial;
 
@@ -80,6 +97,7 @@ export class BuildingMaterialSystem {
   public readonly terrainMaterial: THREE.MeshStandardMaterial;
   public readonly dioramaPedestalMaterial: THREE.MeshStandardMaterial;
   public readonly dioramaBevelMaterial: THREE.LineBasicMaterial;
+  public readonly satelliteBasemapMaterial: THREE.MeshStandardMaterial;
 
   // Edge / Border Material
   public readonly edgeLineMaterial: THREE.LineBasicMaterial;
@@ -97,8 +115,16 @@ export class BuildingMaterialSystem {
     const roofGable = config.roofGableColor || '#c25e36';        // Terracotta clay tile (Khaprail)
     const roofHip = config.roofHipColor || '#b85d32';            // Earthen clay tile
     const roofRidge = config.roofRidgeColor || '#8c381e';        // Deep burnt terracotta trim
-    const asphaltCol = config.asphaltRoadColor || '#3f4854';     // Soft slate asphalt (Pucca sadak)
-    const earthenCol = config.earthenRoadColor || '#b89f7d';     // Sun-baked earth (Kutcha rasta)
+    const roofTin = config.roofTinColor || '#b4c0ce';            // Galvanized tin/zinc corrugated sheet (Patra)
+    const asphaltCol = config.asphaltRoadColor || '#4b5563';     // Slate road paver with clear contrast
+    const earthenCol = config.earthenRoadColor || '#bfa588';     // Warm sun-baked earth (Kutcha lane)
+    const roadCurbCol = config.roadCurbColor || '#e2d9cc';       // Bright stone curb stroke
+    const roadShoulderCol = config.roadShoulderColor || '#c4b197'; // Light sandy-gravel road shoulder
+    const croplandCol = config.croplandColor || '#2d5a37';       // Lush emerald cropland (wheat/sugarcane)
+    const fallowCol = config.fallowFieldColor || '#c9b084';      // Sun-baked ochre fallow loam
+    const commonsCol = config.villageCommonsColor || '#5c8c48';  // Bright green pasture / Gauchar
+    const blackCottonCol = config.blackCottonSoilColor || '#464038'; // Warm dark umber-charcoal Regur soil (18% albedo)
+    const settlementGroundCol = config.settlementGroundColor || '#dfd6c5'; // Warm courtyard clay ground
     const waterCol = config.waterColor || '#2b7a78';             // Mineral turquoise teal
     const waterBedCol = config.waterBedColor || '#1a3338';       // Dark silt bed
     const parcelCol = config.parcelColor || '#ddd5c1';           // Sandstone-clay courtyard ground
@@ -207,6 +233,14 @@ export class BuildingMaterialSystem {
       side: THREE.DoubleSide,
     });
 
+    this.tinRoofMaterial = new THREE.MeshStandardMaterial({
+      color: roofTin,
+      roughness: 0.45,
+      metalness: 0.35,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
     // 4. Road Materials
     this.asphaltRoadMaterial = new THREE.MeshStandardMaterial({
       color: asphaltCol,
@@ -220,6 +254,21 @@ export class BuildingMaterialSystem {
       color: earthenCol,
       roughness: 0.95,
       metalness: 0.00,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.roadCurbMaterial = new THREE.LineBasicMaterial({
+      color: roadCurbCol,
+      linewidth: 2.0,
+      transparent: true,
+      opacity: 0.95,
+    });
+
+    this.roadShoulderMaterial = new THREE.MeshStandardMaterial({
+      color: roadShoulderCol,
+      roughness: 0.92,
+      metalness: 0.02,
       wireframe,
       side: THREE.DoubleSide,
     });
@@ -242,13 +291,60 @@ export class BuildingMaterialSystem {
       wireframe,
     });
 
-    // 6. Land Parcels & Boundary Materials
+    // 6. Land Parcels & Cadastral Materials
     this.parcelMaterial = new THREE.MeshStandardMaterial({
       color: parcelCol,
       roughness: 0.90,
       metalness: 0.02,
       wireframe,
       side: THREE.DoubleSide,
+    });
+
+    this.croplandMaterial = new THREE.MeshStandardMaterial({
+      color: croplandCol,
+      roughness: 0.86,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.fallowFieldMaterial = new THREE.MeshStandardMaterial({
+      color: fallowCol,
+      roughness: 0.92,
+      metalness: 0.01,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.villageCommonsMaterial = new THREE.MeshStandardMaterial({
+      color: commonsCol,
+      roughness: 0.88,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.blackCottonSoilMaterial = new THREE.MeshStandardMaterial({
+      color: blackCottonCol,
+      roughness: 0.94,
+      metalness: 0.01,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.settlementGroundMaterial = new THREE.MeshStandardMaterial({
+      color: settlementGroundCol,
+      roughness: 0.90,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
+    this.fieldBundLineMaterial = new THREE.LineBasicMaterial({
+      color: '#466532',
+      linewidth: 1.5,
+      transparent: true,
+      opacity: 0.85,
     });
 
     this.parcelBorderMaterial = new THREE.LineBasicMaterial({
@@ -312,6 +408,37 @@ export class BuildingMaterialSystem {
       linewidth: 1.5,
     });
 
+    // 8b. Real High-Resolution Satellite Basemap Material
+    let satMapTexture: THREE.Texture | null = null;
+    if (typeof document !== 'undefined') {
+      try {
+        const textureLoader = new THREE.TextureLoader();
+        satMapTexture = textureLoader.load(
+          '/textures/gudwara_satellite_basemap.jpg',
+          (tex) => {
+            tex.colorSpace = THREE.SRGBColorSpace;
+            tex.needsUpdate = true;
+          }
+        );
+        satMapTexture.wrapS = THREE.ClampToEdgeWrapping;
+        satMapTexture.wrapT = THREE.ClampToEdgeWrapping;
+        satMapTexture.generateMipmaps = true;
+        satMapTexture.minFilter = THREE.LinearMipmapLinearFilter;
+        satMapTexture.magFilter = THREE.LinearFilter;
+      } catch (_e) {
+        satMapTexture = null;
+      }
+    }
+
+    this.satelliteBasemapMaterial = new THREE.MeshStandardMaterial({
+      map: satMapTexture,
+      color: satMapTexture ? '#ffffff' : terrainCol,
+      roughness: 0.88,
+      metalness: 0.02,
+      wireframe,
+      side: THREE.DoubleSide,
+    });
+
     // 9. Edge Line Material
     this.edgeLineMaterial = new THREE.LineBasicMaterial({
       color: '#334155',
@@ -357,6 +484,11 @@ export class BuildingMaterialSystem {
 
   public getRoofMaterialByType(roofType: string): THREE.MeshStandardMaterial {
     switch (roofType.toLowerCase()) {
+      case 'tin':
+      case 'tin_sheet':
+      case 'corrugated':
+      case 'metal':
+        return this.tinRoofMaterial;
       case 'gabled_tile':
       case 'gable':
         return this.gableRoofMaterial;
@@ -382,11 +514,15 @@ export class BuildingMaterialSystem {
     this.gableRoofMaterial.dispose();
     this.hipRoofMaterial.dispose();
     this.roofRidgeMaterial.dispose();
+    this.tinRoofMaterial.dispose();
     this.asphaltRoadMaterial.dispose();
     this.earthenRoadMaterial.dispose();
+    this.roadShoulderMaterial.dispose();
     this.waterSurfaceMaterial.dispose();
     this.waterBedMaterial.dispose();
     this.parcelMaterial.dispose();
+    this.blackCottonSoilMaterial.dispose();
+    this.settlementGroundMaterial.dispose();
     this.parcelBorderMaterial.dispose();
     this.villageBoundaryLineMaterial.dispose();
     this.foliageTreeMaterial.dispose();
